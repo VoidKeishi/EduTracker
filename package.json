@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "parcel home/home.html",
+    "buid": "parcel build home/home.html"
+  },
+  "dependencies": {
+    "@material/material-color-utilities": "^0.2.7",
+    "@material/web": "^1.4.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "chart.js": "^4.4.3",
+    "i": "^0.3.7",
+    "material-symbols": "^0.18.0",
+    "npm": "^10.8.0",
+    "rollup": "^4.17.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./home.js"></script>
+  <script type="module" src="makeChart.js"></script>
+  <script type="module" src="../utils/config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <div class="logo-icon">
+        <div id="hamburger-icon" style="cursor: pointer; margin-top: 0.4rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#FFFFFF">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+        </div>
+        <div class="logo">
+          Edu Tracker
+        </div>
+      </div>
+      <div id="tabs-utils">
+        <div id="tabs">
+          <md-tabs class="custom">
+            <md-primary-tab active inline-icon style="width: 15rem;">
+              <md-icon slot="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_56811_27940)">
+                    <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_56811_27940">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </md-icon>
+              Trang chủ
+            </md-primary-tab>
+            <md-primary-tab inline-icon>
+              <md-icon slot="icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 4.5V2.5H8V4.5H12ZM2 6.5V17.5H18V6.5H2ZM18 4.5C19.11 4.5 20 5.39 20 6.5V17.5C20 18.61 19.11 19.5 18 19.5H2C0.89 19.5 0 18.61 0 17.5L0.00999999 6.5C0.00999999 5.39 0.89 4.5 2 4.5H6V2.5C6 1.39 6.89 0.5 8 0.5H12C13.11 0.5 14 1.39 14 2.5V4.5H18Z"
+                    fill="white" />
+                </svg>
+              </md-icon>
+              Quản lý KPI
+            </md-primary-tab>
+            <md-primary-tab inline-icon>
+              <md-icon slot="icon">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 2H15.5V0H13.5V2H5.5V0H3.5V2H2.5C1.39 2 0.51 2.9 0.51 4L0.5 18C0.5 19.1 1.39 20 2.5 20H16.5C17.6 20 18.5 19.1 18.5 18V4C18.5 2.9 17.6 2 16.5 2ZM16.5 18H2.5V8H16.5V18ZM16.5 6H2.5V4H16.5V6ZM6.5 12H4.5V10H6.5V12ZM10.5 12H8.5V10H10.5V12ZM14.5 12H12.5V10H14.5V12ZM6.5 16H4.5V14H6.5V16ZM10.5 16H8.5V14H10.5V16ZM14.5 16H12.5V14H14.5V16Z"
+                    fill="white" />
+                </svg>
+              </md-icon>
+              Lịch
+            </md-primary-tab>
+          </md-tabs>
+        </div>
+        <div id="utils">
+          <div class="search-bar">
+            <md-filled-text-field type="text" placeholder="Search for something" style="width: 25rem;">
+              <md-icon style="margin-left: 30px;" slot="leading-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                  height="40px" viewBox="0 0 24 24" width="40px" fill="#FFFFFF">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg></md-icon>
+            </md-filled-text-field>
+          </div>
+          <div class="notification icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5 19C4.71667 19 4.479 18.904 4.287 18.712C4.09567 18.5207 4 18.2833 4 18C4 17.7167 4.09567 17.4793 4.287 17.288C4.479 17.096 4.71667 17 5 17H6V10C6 8.61667 6.41667 7.38733 7.25 6.312C8.08333 5.23733 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.646 2.72933 10.938 2.438C11.2293 2.146 11.5833 2 12 2C12.4167 2 12.7707 2.146 13.062 2.438C13.354 2.72933 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.23733 16.75 6.312C17.5833 7.38733 18 8.61667 18 10V17H19C19.2833 17 19.5207 17.096 19.712 17.288C19.904 17.4793 20 17.7167 20 18C20 18.2833 19.904 18.5207 19.712 18.712C19.5207 18.904 19.2833 19 19 19H5ZM12 22C11.45 22 10.9793 21.8043 10.588 21.413C10.196 21.021 10 20.55 10 20H14C14 20.55 13.8043 21.021 13.413 21.413C13.021 21.8043 12.55 22 12 22Z"
+                fill="white" />
+            </svg>
+          </div>
+          <div class="theme-change icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 21C9.48333 21 7.354 20.129 5.612 18.387C3.87067 16.6457 3 14.5167 3 12C3 9.69999 3.75 7.70399 5.25 6.01199C6.75 4.32066 8.66667 3.33333 11 3.04999C11.4167 2.99999 11.7417 3.14999 11.975 3.49999C12.2083 3.84999 12.2 4.21666 11.95 4.59999C11.6667 5.03333 11.454 5.49166 11.312 5.97499C11.1707 6.45833 11.1 6.96666 11.1 7.49999C11.1 8.99999 11.625 10.275 12.675 11.325C13.725 12.375 15 12.9 16.5 12.9C17.0167 12.9 17.5293 12.825 18.038 12.675C18.546 12.525 19 12.3167 19.4 12.05C19.75 11.8167 20.1083 11.804 20.475 12.012C20.8417 12.2207 21 12.55 20.95 13C20.7167 15.3 19.7377 17.2083 18.013 18.725C16.2877 20.2417 14.2833 21 12 21Z"
+                fill="white" />
+            </svg>
+          </div>
+          <div class="profile-menu">
+            <div id="profile-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="white" />
+                <rect x="12" y="12" width="24" height="24" rx="12" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M27.6001 21.6C27.6001 23.5882 25.9884 25.2 24.0001 25.2C22.0119 25.2 20.4001 23.5882 20.4001 21.6C20.4001 19.6118 22.0119 18 24.0001 18C25.9884 18 27.6001 19.6118 27.6001 21.6ZM26.4001 21.6C26.4001 22.9255 25.3256 24 24.0001 24C22.6747 24 21.6001 22.9255 21.6001 21.6C21.6001 20.2745 22.6747 19.2 24.0001 19.2C25.3256 19.2 26.4001 20.2745 26.4001 21.6Z"
+                  fill="#006874" />
+                <path
+                  d="M24.0001 27C20.1155 27 16.8057 29.297 15.5449 32.5152C15.8521 32.8202 16.1756 33.1087 16.5141 33.3792C17.453 30.4246 20.3982 28.2 24.0001 28.2C27.6021 28.2 30.5473 30.4246 31.4862 33.3792C31.8247 33.1087 32.1482 32.8202 32.4554 32.5152C31.1946 29.2971 27.8848 27 24.0001 27Z"
+                  fill="#006874" />
+              </svg>
+            </div>
+            <md-menu id="usage-menu" anchor="profile-icon">
+              <md-menu-item class="menu-item">
+                <md-icon slot="start"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM14 8C14 6.9 13.1 6 12 6C10.9 6 10 6.9 10 8C10 9.1 10.9 10 12 10C13.1 10 14 9.1 14 8ZM18 17C17.8 16.29 14.7 15 12 15C9.3 15 6.2 16.29 6 17.01V18H18V17ZM4 17C4 14.34 9.33 13 12 13C14.67 13 20 14.34 20 17V20H4V17Z"
+                      fill="#3F484A" />
+                  </svg>
+                </md-icon>
+                <div slot="headline" style="width: 100px;">Tài khoản</div>
+              </md-menu-item>
+              <md-menu-item>
+                <md-icon slot="start">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M15.31 21.03C15.21 21.71 14.59 22.25 13.85 22.25H10.15C9.40999 22.25 8.78999 21.71 8.69999 20.98L8.42999 19.09C8.15999 18.95 7.89999 18.8 7.63999 18.63L5.83999 19.35C5.13999 19.61 4.36999 19.32 4.02999 18.7L2.19999 15.53C1.84999 14.87 1.99999 14.09 2.55999 13.65L4.08999 12.46C4.07999 12.31 4.06999 12.16 4.06999 12C4.06999 11.85 4.07999 11.69 4.08999 11.54L2.56999 10.35C1.97999 9.90001 1.82999 9.09001 2.19999 8.47001L4.04999 5.28001C4.38999 4.66001 5.15999 4.38001 5.83999 4.65001L7.64999 5.38001C7.90999 5.21001 8.16999 5.06001 8.42999 4.92001L8.69999 3.01001C8.78999 2.31001 9.40999 1.76001 10.14 1.76001H13.84C14.58 1.76001 15.2 2.30001 15.29 3.03001L15.56 4.92001C15.83 5.06001 16.09 5.21001 16.35 5.38001L18.15 4.66001C18.86 4.40001 19.63 4.69001 19.97 5.31001L21.81 8.49001C22.17 9.15001 22.01 9.93001 21.45 10.37L19.93 11.56C19.94 11.71 19.95 11.86 19.95 12.02C19.95 12.18 19.94 12.33 19.93 12.48L21.45 13.67C22.01 14.12 22.17 14.9 21.82 15.53L19.96 18.75C19.62 19.37 18.85 19.65 18.16 19.38L16.36 18.66C16.1 18.83 15.84 18.98 15.58 19.12L15.31 21.03ZM10.62 20.25H13.38L13.75 17.7L14.28 17.48C14.72 17.3 15.16 17.04 15.62 16.7L16.07 16.36L18.45 17.32L19.83 14.92L17.8 13.34L17.87 12.78L17.8731 12.7531C17.902 12.5027 17.93 12.2607 17.93 12C17.93 11.73 17.9 11.47 17.87 11.22L17.8 10.66L19.83 9.08001L18.44 6.68001L16.05 7.64001L15.6 7.29001C15.18 6.97001 14.73 6.71001 14.27 6.52001L13.75 6.30001L13.38 3.75001H10.62L10.25 6.30001L9.71999 6.51001C9.27999 6.70001 8.83999 6.95001 8.37999 7.30001L7.92999 7.63001L5.54999 6.68001L4.15999 9.07001L6.18999 10.65L6.11999 11.21C6.08999 11.47 6.05999 11.74 6.05999 12C6.05999 12.26 6.07999 12.53 6.11999 12.78L6.18999 13.34L4.15999 14.92L5.53999 17.32L7.92999 16.36L8.37999 16.71C8.80999 17.04 9.23999 17.29 9.70999 17.48L10.24 17.7L10.62 20.25ZM15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.49999 13.933 8.49999 12C8.49999 10.067 10.067 8.50001 12 8.50001C13.933 8.50001 15.5 10.067 15.5 12Z"
+                      fill="#3F484A" />
+                  </svg>
+                </md-icon>
+                <div slot="headline" style="width: 100px;">Cài đặt</div>
+              </md-menu-item>
+              <md-menu-item>
+                <md-icon slot="start">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#BA1A1A" />
+                  </svg>
+                </md-icon>
+                <div slot="headline" style="width: 100px;">Đăng xuất</div>
+              </md-menu-item>
+            </md-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="container">
+      <div id="sidebar">
+        <div class="sidebar-title">
+          Trang chủ
+        </div>
+        <div class="sidebar-options">
+          <div class="sidebar-option">
+            <div class="sidebar-option-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                  fill="#3F484A" />
+              </svg>
+            </div>
+            <div class="sidebar-option-title">
+              Công việc đã đăng ký
+            </div>
+          </div>
+          <div class="sidebar-option">
+            <div class="sidebar-option-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                  fill="#3F484A" />
+              </svg>
+            </div>
+            <div class="sidebar-option-title">
+              Lịch sử KPI
+            </div>
+          </div>
+          <div class="sidebar-option">
+            <div class="sidebar-option-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                  fill="#3F484A" />
+              </svg>
+            </div>
+            <div class="sidebar-option-title">
+              Bảng tin
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-divider">
+        </div>
+      </div>
+
+      <div id="content-wrapper">
+        <div id="content">
+          <div id="signed-task">
+            <div class="title">
+              Công việc đã đăng ký
+            </div>
+            <div class="tasks">
+              <div class="task">
+                <div class="task-title">
+                  Giảng dạy
+                </div>
+                <div class="task-details">
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="task">
+                <div class="task-title">
+                  Giảng dạy
+                </div>
+                <div class="task-details">
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="task">
+                <div class="task-title">
+                  Giảng dạy
+                </div>
+                <div class="task-details">
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAgKSURBVHgB7d3haxRHGMfxsTkwNEcticZUrERQUKogtC/6/78q1ELaBgzJYYIRG1MNRmKJELn623NLesk9d7e3uzPz3PcDEqW0PcN9b3Y2szNXtnt7/QDgMv2vAoCRCAQwEAhgIBDAQCCAgUAAA4EABgIBDAQCGAgEMBAIYCAQwEAggIFAAAOBAAYCAQwEAhgIBDAQCGAgEMBAIICBQAADgQAGAgEMBAIYCAQwEAhgIBDAQCCAgUAAA4EABgIBDAQCGDoBUR28Pgy93b3i9/furoe1m6sB6WAEiej09GMRx9nZWfGr/D3SQSAR7e3v/y+IIpLnewHpIJBITj58KC6vhh0cHoZ3x8cBaSCQSDafbY38Z3sv9gPSQCARaOTQ/GOUd8fvw8tXfwXERyAtUxiae4yjUYQJe3wE0jLFYY0eJcXBpVZ8BNIihXHZxHwUXWZpMo94CKRFvd3dMK3e8+n/HdSHQFqikePN26MwLU3Y37x9GxAHgbRkkon5KPrhIRP2OAikBZpsTzIxH+X040du+0ZCIA0rbuvWcDdKgZyenga0i0AaNsul1Xm6xNra6QW0i0AapMn1NLd1x9GEnXVa7SKQBpXPedT63+S2b6sIpCGDOUP1ifkoJx/+YcLeIgJpgMJ4+epVaArrtNpDIA2YdL1VVazTag+B1Gza9VZV6TKLCXvzCKRmG5uboS2MIs0jkBqNexCqbrrt28ZoNc8IpCbFvGC//U90dkJpFoHUpKnbuuMoDm77NodAalDXequqBoshWafVBAKpQYxLq2Gs02oGgcxIk+QUJsqs02oGgcwohdGjtLXdY8JeMwKZwawPQtWNB6vqRyAVDdZbpfdm1GtiFKkPgVQ0vPF0KtgAu14EUsGojadTwQbY9SGQCqyNp1PBOq16EMiU2l5vVRUbYNeDQKYw6cbTqeDBqtkRyBSafhCqbjxYNTsCmVBbD0LVjQ2wZ0MgE6qy8XQq2AmlOgKZQNWNp1PBOq3qCGQCOU3MR2GdVjUEMkZq662qYp1WNQRiiP0gVN3YAHt6BGLwcGl1XrFOq4HtUD0jkBHq3ng6FbrZwIR9cgQygudPWm77To5ALhFrh5K2sAH25AhkSNMbT6eCdVqTIZAhua23qop1WpMhkHNyXW9VFRtgj0cg57S58XQqGEVsBPJFLg9C1Y0NsG0EEuJtPJ0KNsAejUDC4Idn8zh6lBTHweHfARcRyGdnnz6FeddZWAi4iEA+W1u9Ea6vLId59e21b+b672+5st3b6wcAl+kzggAGAgEMBAIYCAQwEAhgIBDAQCCAgUAAA4EABgIBDAQCGAgEMBAIYCAQwEAggIFAAAOBAAYCAQwEAhg6ARiibYB0dLR2gT850deTYueX4a2RFhevhsWrV0On0wndpaVi8wd91Z+9IBAUyr2xdHCQwphkIzkFU0Zz/hRghbK2ulp8XVxcDDkjkDmnzasHYRzVtrvi4Njp98XvFcr6ndvZhsK2P3NKn/xbOzv/vZGblmko/eiBaONkD3vD6lp8/c73Ye3makiZvs869iDWru76HulXJuLvi6VNoz1snKxzyFM/11Cjxsafm1GPPND/+5dff8vmOOrogXjaNDrl0DVSP934vZiAx6YPk6cbf2RxTiKT9DmgT+3UDsopzmx/vlt8TfmSix8UOpdiHOel/voIxLHU33yllF8ngTgV805VFXqtKR4FRyAO6cZHjodz6i5gane3CMQhndab461zvebNZ1tJvXYCcUYjR863znUbOqXbvwTiSK6XVsMUSCqXWgTiiJejrHWJtbXTCykgECc0eqR4F6iqwYrg4xAbgTjhZfQ47+B1/LPbCcQBb6NH6c3RUfQ7WgTiQAqXIk0on3KMiUAcODj0N3qU9AhwTASSOX3KtvVUYAyTPh/fFALJnHYf8azcYSUWAsmc59GjFPMhLwLJnPcRRLQ3VywEkjkPz/OPwyUWKtPz3d4xSUdlnja9GCXmhwCBAAYCAQwEAhgIJHM6gsA7besaC4FkrrOwELyL+SFAIJnrdrvBu5gH8hBI5nSik3cx/44Ekrnu0tfBO51UFQuBZM7bmYCXYQRBZYMDNP2OIho9mINgJtdXVoJXOrotJgJxYG31htvLrJjzDyEQBxTH9ZXl4I1Gj9iHfhKIExpFvNGpuLERiBPfXrsW/XKkTimMHkIgjjy4f9/NXCSF0UMIxBGtWbp967uQOx3qmcLoIQTijALJ+eciWrmb0qm3BOKMLrEePXyY5aWWXvOTxz+ElBCIQ7rUund3PeQmpUurEoE4tXZzNalLlXH0WlOcPxGIY3rT5RBJyq+TQJxLPZLUX5/vddIo6A3Y6SyEvRcvk9mJURNyzZN0KZiy6IHoG+Vl+8yYmwuMc/vWrXB9eaU4Qz32ZnO6Df3o4YPkJuSXiX6JpU8RDztzKPTUr/f1ff75px+jvc7ye/Tk8aMs4pAr2729fsDcKc5U399v7WxDrRN7cP9eNmF80SeQOddkKMUy/OXlz/OMG8ViygwRCAYUig4D1XmHsxzKUz4CrKccHTzIRSC4qDz2TKHoq/6sHdaHJ/ea02jjuu5SN3S7S0UYzjaR6HObFxfoDT54viTLy6Ja8YNCwEAggIFAAAOBAAYCAQwEAhgIBDAQCGAgEMBAIICBQAADgQAGAgEMBAIYCAQwEAhgIBDAQCCAgUAAA4EABgIBDAQCGAgEMBAIYCAQwEAggIFAAAOBAAYCAQwEAhh0/AHngwCX6/8L1//iRUEhd98AAAAASUVORK5CYII=" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                  <div class="task-divider">
+                  </div>
+                  <div class="task-detail">
+                    <div class="task-logo">
+                      <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_60809_422)">
+                          <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                        </g>
+                        <defs>
+                          <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                          </pattern>
+                          <clipPath id="clip0_60809_422">
+                            <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                          </clipPath>
+                          <image id="image0_60809_422" width="200" height="200"
+                            xlink:href="data:image/png;base64,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" />
+                        </defs>
+                      </svg>
+                    </div>
+                    <div class="task-detail-info">
+                      <div class="task-detail-title">
+                        Cấu trúc dữ liệu và giải thuật
+                      </div>
+                      <div class="task-detail-time">
+                        Sáng thứ 2, tiết 3-6, D9-401
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-divider"></div>
+          <div id="kpi-history">
+            <div class="kpi-history-header">
+              <div class="title">
+                Lịch sử KPI
+              </div>
+              <div class="history-navigate">
+                <button id="back">
+                  <svg width="9" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.79346 1.40625L3.19971 6L7.79346 10.5938L6.38721 12L0.387207 6L6.38721 0L7.79346 1.40625Z"
+                      fill="#006874" />
+                  </svg>
+                </button>
+                <div class="time">
+                  2022-2024
+                </div>
+                <button id="next">
+                  <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M0.949708 10.5937L5.54346 6L0.949708 1.40625L2.35596 -1.22528e-06L8.35596 6L2.35596 12L0.949708 10.5937Z"
+                      fill="#006874" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="kpi-history-chart">
+              <canvas id="kpiChart"></canvas>
+            </div>
+          </div>
+          <div class="section-divider"></div>
+          <div id="news">
+            <div class="title">
+              Bảng tin
+            </div>
+            <div class="news-section">
+              <div class="news-logo">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g clip-path="url(#clip0_60809_422)">
+                    <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                  </g>
+                  <defs>
+                    <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                    </pattern>
+                    <clipPath id="clip0_60809_422">
+                      <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                    </clipPath>
+                    <image id="image0_60809_422" width="200" height="200"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </div>
+              <div class="news-detail">
+                <div class="news-title">
+                  [ĐTĐH]THÔNG BÁO VỀ LỊCH HỌC BÙ NGÀY 04/05/2024 (CHO NGÀY NGHỈ 29/04/2024)
+                </div>
+                <div class="news-time">
+                  23/4/2024
+                </div>
+              </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="news-section">
+              <div class="news-logo">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g clip-path="url(#clip0_60809_422)">
+                    <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                  </g>
+                  <defs>
+                    <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                    </pattern>
+                    <clipPath id="clip0_60809_422">
+                      <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                    </clipPath>
+                    <image id="image0_60809_422" width="200" height="200"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </div>
+              <div class="news-detail">
+                <div class="news-title">
+                  [ĐTĐH]THÔNG BÁO VỀ LỊCH HỌC BÙ NGÀY 04/05/2024 (CHO NGÀY NGHỈ 29/04/2024)
+                </div>
+                <div class="news-time">
+                  23/4/2024
+                </div>
+              </div>
+            </div>
+            <div class="section-divider"></div>
+            <div class="news-section">
+              <div class="news-logo">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g clip-path="url(#clip0_60809_422)">
+                    <rect x="0.5" y="0.499939" width="56" height="56" fill="url(#pattern0_60809_422)" />
+                  </g>
+                  <defs>
+                    <pattern id="pattern0_60809_422" patternContentUnits="objectBoundingBox" width="1" height="1">
+                      <use xlink:href="#image0_60809_422" transform="scale(0.005)" />
+                    </pattern>
+                    <clipPath id="clip0_60809_422">
+                      <rect width="56" height="56" fill="white" transform="translate(0.5 0.499939)" />
+                    </clipPath>
+                    <image id="image0_60809_422" width="200" height="200"
+                      xlink:href="data:image/png;base64,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" />
+                  </defs>
+                </svg>
+              </div>
+              <div class="news-detail">
+                <div class="news-title">
+                  [ĐTĐH]THÔNG BÁO VỀ LỊCH HỌC BÙ NGÀY 04/05/2024 (CHO NGÀY NGHỈ 29/04/2024)
+                </div>
+                <div class="news-time">
+                  23/4/2024
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
