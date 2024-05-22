@@ -13,58 +13,59 @@ function ForgotPassword() {
   return (
     <Box
       sx={{
-        backgroundColor: "#FAFAFA",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100vw",
-        minWidth: "45rem",
-      }}>
+        backgroundColor: '#FAFAFA',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        width: '100vw',
+        minWidth: '45rem'
+      }}
+    >
       <Paper
         elevation={8}
         sx={{
-          backgroundColor: "#F5FAFB",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "1.5rem",
-          padding: "3rem 5rem",
-          width: "35rem",
-          borderRadius: "15px"
+          backgroundColor: '#F5FAFB',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '1.5rem',
+          padding: '3rem 5rem',
+          width: '35rem',
+          borderRadius: '15px'
         }}
       >
-        <Typography sx={{ fontSize: "1.5rem" }}>Quên mật khẩu</Typography>
+        <Typography sx={{ fontSize: '1.5rem' }}>Quên mật khẩu</Typography>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "1.5rem",
-            width: "100%",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '1.5rem',
+            width: '100%'
           }}
         >
           <TextField
             fullWidth
-            id="emailInput"
-            label="Email*"
-            variant="outlined"
+            id='emailInput'
+            label='Email*'
+            variant='outlined'
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position='start'>
                   <MailOutlineIcon />
                 </InputAdornment>
-              ),
+              )
             }}
           />
           <Button
-            variant="contained"
+            variant='contained'
             sx={{
-              borderRadius: "50px",
-              backgroundColor: "#006874",
-              fontSize: "0.75rem"
+              borderRadius: '50px',
+              backgroundColor: '#006874',
+              fontSize: '0.75rem'
             }}
             onClick={() => navigate('/reset-password')}
           >

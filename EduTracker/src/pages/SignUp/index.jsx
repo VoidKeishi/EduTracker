@@ -24,75 +24,77 @@ function SignUp() {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show)
   const handleClickClearInputRole = () => setInputRole('')
-  const handleClickCheckWorkingPlace = () => setCheckWorkingPlace(!checkWorkingPlace)
+  const handleClickCheckWorkingPlace = () =>
+    setCheckWorkingPlace(!checkWorkingPlace)
 
   return (
     <Box
       sx={{
-        backgroundColor: "#FAFAFA",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100vw",
-        minWidth: "45rem",
-      }}>
+        backgroundColor: '#FAFAFA',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        width: '100vw',
+        minWidth: '45rem'
+      }}
+    >
       <Paper
         elevation={8}
         sx={{
-          backgroundColor: "#F5FAFB",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "1.5rem",
-          padding: "3rem 5rem",
-          width: "35rem",
-          borderRadius: "15px"
+          backgroundColor: '#F5FAFB',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '1.5rem',
+          padding: '3rem 5rem',
+          width: '35rem',
+          borderRadius: '15px'
         }}
       >
-        <Typography sx={{ fontSize: "1.5rem" }}>Đăng ký</Typography>
+        <Typography sx={{ fontSize: '1.5rem' }}>Đăng ký</Typography>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "1.5rem",
-            width: "100%",
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '1.5rem',
+            width: '100%'
           }}
         >
           <TextField
             fullWidth
-            id="emailInput"
-            label="Email*"
-            variant="outlined"
+            id='emailInput'
+            label='Email*'
+            variant='outlined'
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position='start'>
                   <MailOutlineIcon />
                 </InputAdornment>
-              ),
+              )
             }}
           />
           <TextField
             fullWidth
             type={showPassword ? 'text' : 'password'}
-            id="passwordInput"
-            label="Mật khẩu*"
-            variant="outlined"
+            id='passwordInput'
+            label='Mật khẩu*'
+            variant='outlined'
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position='start'>
                   <HttpsOutlinedIcon />
                 </InputAdornment>
               ),
               endAdornment: (
-                <InputAdornment position="end">
+                <InputAdornment position='end'>
                   <IconButton
-                    aria-label="toggle password visibility"
+                    aria-label='toggle password visibility'
                     onClick={handleClickShowPassword}
-                    edge="end"
+                    edge='end'
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
@@ -103,21 +105,21 @@ function SignUp() {
           <TextField
             fullWidth
             type={showPassword ? 'text' : 'password'}
-            id="retypePasswordInput"
-            label="Nhập lại mật khẩu*"
-            variant="outlined"
+            id='retypePasswordInput'
+            label='Nhập lại mật khẩu*'
+            variant='outlined'
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position='start'>
                   <HttpsOutlinedIcon />
                 </InputAdornment>
               ),
               endAdornment: (
-                <InputAdornment position="end">
+                <InputAdornment position='end'>
                   <IconButton
-                    aria-label="toggle password visibility"
+                    aria-label='toggle password visibility'
                     onClick={handleClickShowPassword}
-                    edge="end"
+                    edge='end'
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
@@ -128,22 +130,22 @@ function SignUp() {
           <TextField
             fullWidth
             value={inputRole}
-            id="inputRole"
-            label="Bạn là*"
-            variant="outlined"
+            id='inputRole'
+            label='Bạn là*'
+            variant='outlined'
             onChange={(e) => setInputRole(e.target.value)}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
+                <InputAdornment position='start'>
                   <PermIdentityIcon />
                 </InputAdornment>
               ),
               endAdornment: (
-                <InputAdornment position="end">
+                <InputAdornment position='end'>
                   <IconButton
-                    aria-label="clear role input"
+                    aria-label='clear role input'
                     onClick={handleClickClearInputRole}
-                    edge="end"
+                    edge='end'
                   >
                     <HighlightOffIcon />
                   </IconButton>
@@ -153,33 +155,42 @@ function SignUp() {
           />
           <TextField
             fullWidth
-            value={"Đại học bách khoa Hà Nội"}
-            id="workingPlace"
-            label="Nơi công tác"
-            variant="outlined"
+            value={'Đại học bách khoa Hà Nội'}
+            id='workingPlace'
+            label='Nơi công tác'
+            variant='outlined'
             onClick={handleClickCheckWorkingPlace}
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
-                  { checkWorkingPlace ? <RadioButtonCheckedIcon /> : <RadioButtonUncheckedIcon /> }
+                <InputAdornment position='start'>
+                  {checkWorkingPlace ? (
+                    <RadioButtonCheckedIcon />
+                  ) : (
+                    <RadioButtonUncheckedIcon />
+                  )}
                 </InputAdornment>
               )
             }}
           />
-          <Button  
-            variant="contained"
+          <Button
+            variant='contained'
             sx={{
-              borderRadius: "50px",
-              backgroundColor: "#006874",
-              fontSize: "0.75rem"
+              borderRadius: '50px',
+              backgroundColor: '#006874',
+              fontSize: '0.75rem'
             }}
           >
             Đăng ký
           </Button>
         </Box>
-        <Box sx={{ fontWeight: "bold" }}>
-          <span style={{ marginRight: "1.5rem"}} >Đã có tài khoản?</span>
-          <Link style={{ textDecoration: "none", color: "#006874" }} to={"/sign-in"}>Đăng nhập</Link>
+        <Box sx={{ fontWeight: 'bold' }}>
+          <span style={{ marginRight: '1.5rem' }}>Đã có tài khoản?</span>
+          <Link
+            style={{ textDecoration: 'none', color: '#006874' }}
+            to={'/sign-in'}
+          >
+            Đăng nhập
+          </Link>
         </Box>
       </Paper>
     </Box>
