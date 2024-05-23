@@ -12,3 +12,5 @@ export const user = {
     university: 'HUST'
   }
 }
+
+export const kpi = {}

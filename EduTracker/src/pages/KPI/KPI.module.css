@@ -1,0 +1,432 @@
+.groupChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 430px;
+  height: 56px;
+}
+.menuIcon {
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.searchIcon {
+  width: 24px;
+  position: relative;
+  border-radius: 12px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.searchWrapper {
+  position: absolute;
+  top: 16px;
+  left: 374px;
+  border-radius: 50px;
+  background-color: #9eeffd;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.trackAchieveExcel11 {
+  position: absolute;
+  top: 10px;
+  left: 72px;
+  width: 120px;
+  height: 36px;
+  object-fit: cover;
+}
+.rectangleParent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 430px;
+  height: 56px;
+  display: none;
+}
+.iconButton {
+  width: 7px;
+  height: 48px;
+  display: none;
+}
+.classLessonStreamlineCoreIcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.title {
+  position: absolute;
+  top: 0px;
+  left: 37px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  font-weight: 500;
+  display: inline-block;
+  width: 86px;
+}
+.classLessonStreamlineCoreParent {
+  width: 123px;
+  position: relative;
+  height: 24px;
+}
+.header {
+  width: 352px;
+  height: 67px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 4px 12px 16px;
+  box-sizing: border-box;
+  gap: 56px;
+}
+.mediaTextContent {
+  position: absolute;
+  top: 0px;
+  left: 7px;
+  width: 352px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+}
+.tThin {
+  white-space: pre-wrap;
+}
+.span {
+  color: #006874;
+}
+.tThin60Container {
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.progress {
+  position: absolute;
+  top: 32px;
+  left: 188.12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.groupItem {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: 0px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+}
+.groupInner {
+  position: absolute;
+  top: calc(50% - 60px);
+  left: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-color: #006874;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+}
+.span3 {
+  position: absolute;
+  top: calc(50% - 31.5px);
+  left: 27.75px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63.8px;
+  height: 63.8px;
+}
+.ellipseParent {
+  width: 120px;
+  position: relative;
+  height: 120px;
+}
+.cTnhHon {
+  margin: 0;
+}
+.cTnhHonContainer1 {
+  width: 100%;
+}
+.cTnhHonContainer {
+  width: 194px;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.groupParent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 163px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.frameWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 163px;
+  height: 160px;
+  text-align: center;
+  font-size: 25px;
+  color: #006874;
+}
+.progressParent {
+  position: absolute;
+  top: 76px;
+  left: 36.94px;
+  width: 292.1px;
+  height: 160px;
+  color: #000;
+}
+.stateLayer {
+  width: 242px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  box-sizing: border-box;
+}
+.primaryAction {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 100px;
+  border: 1px solid #6f797a;
+  box-sizing: border-box;
+  width: 90px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.primaryActionWrapper {
+  position: absolute;
+  top: 236px;
+  left: 245px;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  color: #006874;
+}
+.secondaryAction {
+  width: 99px;
+  border-radius: 100px;
+  border: 1px solid #6f797a;
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.actions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 79.7px;
+  height: 37.7px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.actionsWrapper {
+  position: absolute;
+  top: 292px;
+  left: 143.17px;
+  width: 79.7px;
+  height: 37.7px;
+}
+.content {
+  width: 366px;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #bfc8ca;
+  box-sizing: border-box;
+  height: 292px;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.stateLayer1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+}
+.background {
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  border-radius: 12px;
+  background-color: #f5fafb;
+  border: 1px solid #bfc8ca;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+}
+.stackedCard {
+  position: absolute;
+  top: 664px;
+  left: 0px;
+  border-radius: 12px;
+  width: 366px;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.ai60LmContainer {
+  width: 131px;
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+.progressGroup {
+  position: absolute;
+  top: 76px;
+  left: 36.94px;
+  width: 319.1px;
+  height: 160px;
+  color: #000;
+}
+.stackedCard1 {
+  position: absolute;
+  top: 358px;
+  left: 0px;
+  border-radius: 12px;
+  width: 366px;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.progressContainer {
+  position: absolute;
+  top: 76px;
+  left: 36.94px;
+  width: 292.1px;
+  height: 160px;
+}
+.mediaTextContent2 {
+  position: absolute;
+  top: 0px;
+  left: 7px;
+  width: 352px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  color: #171d1e;
+}
+.stackedCard2 {
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  border-radius: 12px;
+  width: 366px;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  color: #000;
+}
+.tinKpi1 {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+}
+.tinKpi {
+  position: absolute;
+  top: 72px;
+  left: 32px;
+  width: 366px;
+  height: 956px;
+}
+.addBoxIcon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.stateLayer6 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px 16px 16px;
+  gap: 12px;
+}
+.extendedFab {
+  position: fixed;
+  bottom: 60px;
+  right: 32px;
+  z-index: 999;
+}
+.kpi {
+  width: 100%;
+  position: relative;
+  background-color: #f5fafb;
+  height: 1106px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  color: #171d1e;
+  font-family: Roboto;
+}
