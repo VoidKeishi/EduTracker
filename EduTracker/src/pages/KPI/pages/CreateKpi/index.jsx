@@ -4,10 +4,11 @@ import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import React from 'react';
 import StepA from './components/StepA';
+import StepB from './components/StepB';
+import StepC from './components/StepC';
+import StepD from './components/StepD';
 
 const steps = ['Phương thức', 'Thông tin KPI', 'Thiết lập mục tiêu', 'Hoàn thành'];
 
@@ -34,11 +35,13 @@ function CreateKpi() {
     >
       <Box>
         <Stepper activeStep={activeStep}>
-          {steps.map((label) => {
+          {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
             return (
-              <Step key={label} {...stepProps}>
+              <Step onClick={() => {
+                if (activeStep > index) setActiveStep(index)
+              }} key={label} {...stepProps}>
                 <StepLabel {...labelProps}>{label}</StepLabel>
               </Step>
             );
@@ -51,13 +54,16 @@ function CreateKpi() {
           width: "100%"
         }}
       >
-
-      </Box>
         {
           activeStep == 0
           ? <StepA activeStep={activeStep} handleNext={handleNext} />
-          : null
+          : activeStep == 1
+          ? <StepB handleNext={handleNext} handleBack={handleBack} />
+          : activeStep == 2
+          ? <StepC handleNext={handleNext} handleBack={handleBack} />
+          : <StepD handleBack={handleBack} />
         }
+      </Box>
     </Paper>
   )
 }

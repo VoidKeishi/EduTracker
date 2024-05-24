@@ -10,7 +10,6 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -19,7 +18,9 @@ import Logo from "../../components/Svg/Logo";
 import WorkOutlineRoundedIcon from '@mui/icons-material/WorkOutlineRounded';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import { KPI } from "../../components/Svg/Sidebar";
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -62,6 +63,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Layout() {
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [currentLocation, setCurrentLocation] = React.useState('/kpi')
+
+  console.log()
+  React.useEffect(() => {
+    setCurrentLocation("/" + location.pathname.split('/')[1])
+  }, [location])
+
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
@@ -94,8 +104,8 @@ function Layout() {
         top: "3%",
       }}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Tài Khoản</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Cài Đặt</MenuItem>
     </Menu>
   );
 
@@ -103,7 +113,7 @@ function Layout() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -111,7 +121,7 @@ function Layout() {
             sx={{ mr: 1 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Logo />
           
           <Box sx={{ flexGrow: 1 }} />
@@ -187,9 +197,18 @@ function Layout() {
                   gap: "0.3rem"
                 }}
               >
-                <Box>
+                <Button
+                  sx={{
+                    color: "black",
+                    backgroundColor: () => currentLocation == '/kpi' ? "#9EEFFD" : "#FFFFFF",
+                    '&:hover': {
+                      backgroundColor: "#9EEFFD"
+                    }
+                  }}
+                  onClick={() => navigate('/kpi')}
+                >
                   <KPI />
-                </Box>
+                </Button>
                 <Typography variant="body1">
                   KPI
                 </Typography>
@@ -204,9 +223,19 @@ function Layout() {
                   gap: "0.3rem"
                 }}
               >
-                <Box>
+                <Button
+                  sx={{
+                    color: "black",
+                    backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
+                    '&:hover': {
+                      backgroundColor: "#9EEFFD"
+                    }
+                    
+                  }}
+                  onClick={() => navigate('/task')}
+                >
                   <WorkOutlineRoundedIcon />
-                </Box>
+                </Button>
                 <Typography variant="body1">
                   Công việc
                 </Typography>
@@ -221,9 +250,18 @@ function Layout() {
                   gap: "0.3rem"
                 }}
               >
-                <Box>
+                <Button
+                  sx={{
+                    color: "black",
+                    backgroundColor: () => currentLocation == '/news' ? "#9EEFFD" : "#FFFFFF",
+                    '&:hover': {
+                      backgroundColor: "#9EEFFD"
+                    }
+                  }}
+                  onClick={() => navigate('/news')}
+                >
                   <ArticleOutlinedIcon />
-                </Box>
+                </Button>
                 <Typography variant="body1">
                   Bảng tin
                 </Typography>

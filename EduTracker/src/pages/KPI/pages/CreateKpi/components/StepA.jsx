@@ -2,7 +2,6 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom'
 
 function StepA({ activeStep, handleNext }) {
   return (
@@ -44,7 +43,10 @@ function StepA({ activeStep, handleNext }) {
                 color: "black",
                 backgroundColor: "white",
                 borderRadius: "5rem",
-                padding: "0.5rem 0"
+                padding: "0.5rem 0",
+                '&:hover': {
+                  color: 'white'
+                }
               }}
             >
               Từ tệp excel (*)
@@ -55,7 +57,10 @@ function StepA({ activeStep, handleNext }) {
                 color: "black",
                 backgroundColor: "white",
                 borderRadius: "5rem",
-                padding: "0.5rem 0"
+                padding: "0.5rem 0",
+                '&:hover': {
+                  color: 'white'
+                }
               }}
             >
               Từ hệ thống
@@ -66,8 +71,12 @@ function StepA({ activeStep, handleNext }) {
                 color: "black",
                 backgroundColor: "white",
                 borderRadius: "5rem",
-                padding: "0.5rem 0"
+                padding: "0.5rem 0",
+                '&:hover': {
+                  color: 'white'
+                }
               }}
+              onClick={handleNext}
             >
               Thiết lập từ đầu
             </Button>
@@ -80,7 +89,7 @@ function StepA({ activeStep, handleNext }) {
                 textAlign: "center"
               }}
             >
-              (*) Sử dụng mẫu của hệ thống <Link>tại đây</Link>
+              (*) Sử dụng mẫu của hệ thống <a href='https://docs.google.com/spreadsheets/d/19sig_kab5kxMOGkdpxND1W1EGA6zsnJdVOWA3lTNvaM/edit#gid=0'>tại đây</a>
             </Typography>
           </Box>
         </Box>
