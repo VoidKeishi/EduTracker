@@ -18,8 +18,8 @@ function App() {
         <Route path='/reset-password' element={<ResetPassword />} />
         <Route path='/' element={<Layout />}>
           <Route path='/kpi' element={<KPI />}>
-            <Route path='create-kpi' element={<CreateKpi />} />
             <Route path='' element={<KpiGeneral />} />
+            <Route path='create-kpi' element={<CreateKpi />} />
           </Route>
         </Route>
       </Routes>

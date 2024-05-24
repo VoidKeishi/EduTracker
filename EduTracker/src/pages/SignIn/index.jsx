@@ -29,7 +29,7 @@ function SignIn() {
   const handleClickShowPassword = () => setShowPassword((show) => !show)
   const signInHandle = () => {
     if (email === userData.email && password == userData.password) {
-      navigate('/homepage')
+      navigate('/kpi')
     }
   }
 
