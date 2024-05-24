@@ -2,9 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import Layout from './pages/Layout'
-import Homepage from './pages/Home'
+import KPI from './pages/KPI'
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword'
 import ResetPassword from './pages/ForgotPassword/ResetPassword'
+import CreateKpi from './pages/KPI/pages/CreateKpi'
+import KpiGeneral from './pages/KPI/pages/KpiGeneral'
 
 function App() {
   return (
@@ -15,7 +17,10 @@ function App() {
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
         <Route path='/' element={<Layout />}>
-          <Route path='/homepage' element={<Homepage />} />
+          <Route path='/kpi' element={<KPI />}>
+            <Route path='create-kpi' element={<CreateKpi />} />
+            <Route path='' element={<KpiGeneral />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

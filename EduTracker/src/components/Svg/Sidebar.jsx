@@ -1,0 +1,12 @@
+export function KPI() {
+  return (
+    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.59424 7.9415L16.38 1.59079" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M13.6157 0.607147L16.38 1.59072L15.3514 4.20143" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M17.0358 16.3928H13.8215V7.89285C13.8215 7.73182 13.8893 7.57739 14.0098 7.46354C14.1304 7.34967 14.2939 7.28571 14.4644 7.28571H16.393C16.5634 7.28571 16.727 7.34967 16.8476 7.46354C16.9681 7.57739 17.0358 7.73182 17.0358 7.89285V16.3928Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10.6071 16.3929H7.39282V9.71429C7.39282 9.55326 7.46055 9.39883 7.58112 9.28498C7.70166 9.17112 7.86518 9.10715 8.03568 9.10715H9.96425C10.1347 9.10715 10.2983 9.17112 10.4188 9.28498C10.5394 9.39883 10.6071 9.55326 10.6071 9.71429V16.3929Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4.17864 16.3929H0.964355V11.5357C0.964355 11.3747 1.03209 11.2203 1.15264 11.1064C1.2732 10.9926 1.43671 10.9286 1.60721 10.9286H3.53578C3.70628 10.9286 3.8698 10.9926 3.99035 11.1064C4.11091 11.2203 4.17864 11.3747 4.17864 11.5357V16.3929Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+
+  )
+}
