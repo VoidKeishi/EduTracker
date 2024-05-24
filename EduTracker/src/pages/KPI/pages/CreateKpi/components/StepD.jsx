@@ -11,7 +11,7 @@ function StepD({ handleBack }) {
       <Box
         sx={{
           marginTop: "5rem",
-          marginBottom: "5rem",
+          marginBottom: "2rem",
           width: "100%",
           display: "flex",
           justifyContent: "center",

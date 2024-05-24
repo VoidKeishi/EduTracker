@@ -29,8 +29,9 @@ function CreateKpi() {
       elevation={4}
       sx={{
         width: "100%",
-        padding: "4rem 10rem 3rem",
+        padding: "4rem 10rem 1rem",
         borderRadius: "1rem",
+        marginBottom: "11rem"
       }}
     >
       <Box>
@@ -51,7 +52,8 @@ function CreateKpi() {
 
       <Box
         sx={{
-          width: "100%"
+          width: "100%",
+          height: "100%"
         }}
       >
         {

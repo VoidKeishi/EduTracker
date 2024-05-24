@@ -166,7 +166,8 @@ function Layout() {
         <Box
           sx={{
             display: "flex",
-            marginTop: "4rem"
+            marginTop: "4rem",
+            backgroundColor: "#CDE7EC",
           }}
         >
           <Box sx={{
@@ -174,7 +175,7 @@ function Layout() {
             minWidth: "10rem",
             position: "fixed",
             zIndex: "1",
-            height: "100%",
+            height: "100%"
           }}>
             <Paper 
               elevation={4}
@@ -226,13 +227,13 @@ function Layout() {
                 <Button
                   sx={{
                     color: "black",
-                    backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
-                    '&:hover': {
-                      backgroundColor: "#9EEFFD"
-                    }
+                    // backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
+                    // '&:hover': {
+                    //   backgroundColor: "#9EEFFD"
+                    // }
                     
                   }}
-                  onClick={() => navigate('/task')}
+                  onClick={() => navigate('/kpi')}
                 >
                   <WorkOutlineRoundedIcon />
                 </Button>
@@ -253,12 +254,12 @@ function Layout() {
                 <Button
                   sx={{
                     color: "black",
-                    backgroundColor: () => currentLocation == '/news' ? "#9EEFFD" : "#FFFFFF",
-                    '&:hover': {
-                      backgroundColor: "#9EEFFD"
-                    }
+                    // backgroundColor: () => currentLocation == '/news' ? "#9EEFFD" : "#FFFFFF",
+                    // '&:hover': {
+                    //   backgroundColor: "#9EEFFD"
+                    // }
                   }}
-                  onClick={() => navigate('/news')}
+                  onClick={() => navigate('/kpi')}
                 >
                   <ArticleOutlinedIcon />
                 </Button>
@@ -275,7 +276,6 @@ function Layout() {
               marginTop: "2rem",
               maxWidth: "103rem",
               minWidth: "103rem",
-              overflow: 'auto'
             }}
           >
             <Outlet />

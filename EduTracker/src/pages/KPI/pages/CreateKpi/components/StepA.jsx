@@ -97,7 +97,8 @@ function StepA({ activeStep, handleNext }) {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "end"
+          justifyContent: "end",
+          marginBottom: "2rem"
         }}
       >
         {

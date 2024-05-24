@@ -17,7 +17,7 @@ function StepB({ handleNext, handleBack }) {
       <Box
         sx={{
           marginTop: "8rem",
-          marginBottom: "5rem",
+          marginBottom: "3rem",
           width: "100%",
           display: "flex",
           justifyContent: "center",
@@ -92,7 +92,8 @@ function StepB({ handleNext, handleBack }) {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "end"
+          justifyContent: "end",
+          marginBottom: "1.5rem"
         }}
       >
         <Button variant="text" onClick={handleBack}>Trở lại</Button>

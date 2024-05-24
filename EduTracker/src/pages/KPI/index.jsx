@@ -21,7 +21,7 @@ function KPI() {
           padding: "1.5rem 2rem 0rem 2rem"
         }}
       >
-          <Outlet />
+        <Outlet />
       </Box>
     </Box>
   )
