@@ -7,6 +7,7 @@ import ForgotPassword from './pages/ForgotPassword/ForgotPassword'
 import ResetPassword from './pages/ForgotPassword/ResetPassword'
 import CreateKpi from './pages/KPI/pages/CreateKpi'
 import KpiGeneral from './pages/KPI/pages/KpiGeneral'
+import Task from './pages/Task'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path='' element={<KpiGeneral />} />
             <Route path='create-kpi' element={<CreateKpi />} />
           </Route>
+          <Route path='/task' element={<Task />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -227,13 +227,12 @@ function Layout() {
                 <Button
                   sx={{
                     color: "black",
-                    // backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
-                    // '&:hover': {
-                    //   backgroundColor: "#9EEFFD"
-                    // }
-                    
+                    backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
+                    '&:hover': {
+                      backgroundColor: "#9EEFFD"
+                    }                    
                   }}
-                  onClick={() => navigate('/kpi')}
+                  onClick={() => navigate('/task')}
                 >
                   <WorkOutlineRoundedIcon />
                 </Button>

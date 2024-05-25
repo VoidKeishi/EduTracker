@@ -1,0 +1,74 @@
+.fc .fc-button {
+  background-color: #FFF;
+  border: 0;
+  color: black;
+}
+
+.fc .fc-button:hover {
+  color: #FFF;
+  background-color: #006874;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  color: #FABB18;
+  background-color: #FFF;
+  border: 0;
+}
+
+.fc .fc-toolbar-title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.fc-daygrid-day-frame {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.fc-daygrid-day-frame:hover {
+  background-color: #F7F7F7;
+}
+
+.fc-toolbar-chunk {
+  display: flex;
+}
+
+.fc-header-toolbar {
+  background-color: white;
+  padding: 5px 3rem;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fc-view {
+  background-color: white;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 30px;
+}
+
+.fc-day-today {
+  background-color: #FABB18 !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: none;
+}
+
+.fc-daygrid-block-event {
+  cursor: pointer;
+  background-color: #FABB18;
+  border: 0;
+  font-weight: 600;
+}

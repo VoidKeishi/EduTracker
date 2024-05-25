@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { themeOption } from './utils/theme.js'
 import { ThemeProvider } from '@mui/material/styles'
 import { AppProvider } from './context/AppContext.jsx'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
