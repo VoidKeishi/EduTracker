@@ -46,9 +46,9 @@ function KpiGeneral() {
           flexWrap: "wrap",
         }}
       >
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
+        <KpiGeneralInfo KPIName="Giảng dạy" title1 = "OOP" value1={50} title2 = "ITSS" value2={60} title3 = "UI-UX" value3={20}  />
+        <KpiGeneralInfo KPIName="Phục vụ" title1 = "Hội thảo" value1={20} title2 = "ĐGTD" value2={30} title3 = "SHCD" value3={15} />
+        <KpiGeneralInfo KPIName="Nghiên cứu" title1 = "Ứng dụng" value1={50} title2 = "Kiểm thử" value2={60} title3 = "Lab" value3={75} />
       </Box>
     </>
 

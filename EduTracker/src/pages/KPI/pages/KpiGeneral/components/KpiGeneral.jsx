@@ -50,7 +50,7 @@ function LinearProgressWithLabel(props) {
   );
 }
 
-function KpiGeneralInfo() {
+function KpiGeneralInfo({KPIName, title1, value1, title2, value2, title3, value3}) {
   return (
     <Paper
           elevation={4}
@@ -77,7 +77,7 @@ function KpiGeneralInfo() {
                   fontWeight: "bold"
                 }}
               >
-                Giảng dạy
+                {KPIName}
               </Typography>
             </Box>
             <Box
@@ -107,9 +107,9 @@ function KpiGeneralInfo() {
                     gap: "0.8rem"
                   }}
                 >
-                  <Typography variant='body1'>OOP</Typography>
+                  <Typography variant='body1'>{title1}</Typography>
                   <Box sx={{ width: "100%" }}>
-                    <LinearProgressWithLabel value={50} />
+                    <LinearProgressWithLabel value={value1} />
                   </Box>
                 </Box>
 
@@ -123,9 +123,9 @@ function KpiGeneralInfo() {
                     gap: "0.8rem"
                   }}
                 >
-                  <Typography variant='body1'>ITSS</Typography>
+                  <Typography variant='body1'>{title2}</Typography>
                   <Box sx={{ width: "100%" }}>
-                    <LinearProgressWithLabel value={50} />
+                    <LinearProgressWithLabel value={value2} />
                   </Box>
                 </Box>
 
@@ -139,9 +139,9 @@ function KpiGeneralInfo() {
                     gap: "0.8rem"
                   }}
                 >
-                  <Typography variant='body1'>UI-UX</Typography>
+                  <Typography variant='body1'>{title3}</Typography>
                   <Box sx={{ width: "100%" }}>
-                    <LinearProgressWithLabel value={50} />
+                    <LinearProgressWithLabel value={value3} />
                   </Box>
                 </Box>
               </Box>
