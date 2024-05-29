@@ -123,7 +123,7 @@ function KpiGeneralInfo() {
                     gap: "0.8rem"
                   }}
                 >
-                  <Typography variant='body1'>OOP</Typography>
+                  <Typography variant='body1'>ITSS</Typography>
                   <Box sx={{ width: "100%" }}>
                     <LinearProgressWithLabel value={50} />
                   </Box>
@@ -139,7 +139,7 @@ function KpiGeneralInfo() {
                     gap: "0.8rem"
                   }}
                 >
-                  <Typography variant='body1'>OOP</Typography>
+                  <Typography variant='body1'>UI-UX</Typography>
                   <Box sx={{ width: "100%" }}>
                     <LinearProgressWithLabel value={50} />
                   </Box>

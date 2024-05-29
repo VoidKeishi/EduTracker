@@ -49,11 +49,6 @@ function KpiGeneral() {
         <KpiGeneralInfo />
         <KpiGeneralInfo />
         <KpiGeneralInfo />
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
-        <KpiGeneralInfo />
       </Box>
     </>
 
