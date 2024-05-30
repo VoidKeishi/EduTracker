@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import CssBaseline from "@mui/material/CssBaseline";
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import KpiTitle from '../../../../../components/Svg/KpiTitle';
@@ -9,6 +10,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles'
 import { useNavigate } from 'react-router-dom'
+import { useCallback } from 'react'
 
 const data = [
   { value: 60, color: '#006874' },
