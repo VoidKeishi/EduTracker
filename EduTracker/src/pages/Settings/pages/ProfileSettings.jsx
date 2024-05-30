@@ -35,7 +35,7 @@ const ProfileSettings = () => {
                 <img
                   className="h-6 w-6 relative overflow-hidden shrink-0"
                   alt=""
-                  src="/visibility-off.svg"
+                  src="/svgA/visibility-off.svg"
                 />
                 <img className="h-6 w-6 relative hidden min-h-[24px]" alt="" />
               </div>
@@ -50,7 +50,7 @@ const ProfileSettings = () => {
               className="h-[25px] w-[25px] relative object-cover"
               loading="lazy"
               alt=""
-              src="/image-5@2x.png"
+              src="/svgA/image-5@2x.png"
             />
             <div className="flex-1 flex flex-col items-start justify-start pt-[4.5px] px-0 pb-0">
               <b className="self-stretch h-4 relative tracking-[0.1px] leading-[20px] font-semibold whitespace-pre-wrap inline-block shrink-0">
@@ -79,7 +79,7 @@ const ProfileSettings = () => {
               <img
                 className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
                 alt=""
-                src="/svgA/icon-11.svg"
+                src="/svgA/icon-theme.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -93,7 +93,7 @@ const ProfileSettings = () => {
           </div>
           <div className="w-[294px] rounded-81xl overflow-hidden flex flex-row items-start justify-start py-0 pr-5 pl-0 box-border">
             <div className="flex-1 flex flex-row items-start justify-start p-4 gap-[12px]">
-              <img className = "h-[1.563rem] w-[1.563rem]" alt="" src="/svgA/image-5@2x" />
+              <img className = "h-[1.563rem] w-[1.563rem]" alt="" src="/svgA/icon-word.svg" />
               <div className="w-[198px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
                   Chữ
@@ -120,7 +120,7 @@ const ProfileSettings = () => {
               <img
                 className="h-6 w-6 relative min-h-[24px]"
                 alt=""
-                src="/svgA/icon-4.svg"
+                src="/svgA/icon-language.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -287,7 +287,7 @@ const ProfileSettings = () => {
                                   <img
                                     className="h-4 w-px relative"
                                     alt=""
-                                    src="/caret.svg"
+                                    src="/svgA/caret.svg"
                                   />
                                 </div>
                                 <div className="w-6 !m-[0] absolute top-[-12px] left-[-4px] bg-schemes-surface flex flex-row items-center justify-start py-0 px-[3px] box-border">
@@ -1003,7 +1003,7 @@ const ProfileSettings = () => {
                             <img
                               className="h-4 w-px relative"
                               alt=""
-                              src="/caret.svg"
+                              src="/svgA/caret.svg"
                             />
                           </div>
                           <div className="w-[45px] !m-[0] absolute top-[-12px] left-[-36px] bg-m3-sys-light-on-primary flex flex-row items-center justify-start py-0 px-[3px] box-border text-xs text-m3-sys-light-primary">
@@ -1053,7 +1053,7 @@ const ProfileSettings = () => {
                                   <img
                                     className="h-6 w-6 relative overflow-hidden shrink-0"
                                     alt=""
-                                    src="/visibility-off.svg"
+                                    src="/svgA/visibility-off.svg"
                                   />
                                   <img
                                     className="h-6 w-6 relative hidden min-h-[24px]"
@@ -1088,7 +1088,7 @@ const ProfileSettings = () => {
                                   <img
                                     className="h-6 w-6 relative overflow-hidden shrink-0"
                                     alt=""
-                                    src="/visibility-off.svg"
+                                    src="/svgA/visibility-off.svg"
                                   />
                                   <img
                                     className="h-6 w-6 relative hidden min-h-[24px]"
