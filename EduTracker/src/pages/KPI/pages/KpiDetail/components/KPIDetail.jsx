@@ -1260,7 +1260,7 @@ const ProgressCells = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem 2.187rem;
+  padding: 0.785rem 1.5rem;
   gap: 0.937rem;
 `;
 const Divider13 = styled.div`
@@ -2605,9 +2605,12 @@ const KPIDetail = () => {
                         </ColumnHeaders2>
                         <CellElements4>
                           <ProgressCells>
-                            <Subtract1ButtonDeleteButt type="checkbox" />
+                          <Subtract1ButtonDeleteButtIcon
+                              alt=""
+                              src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-1.svg"
+                            />
                             <CellContent4>16/48</CellContent4>
-                            <Icon1 alt="" src="/icon-10.svg" />
+                            <Icon1 alt="" src="/svgA/icon-plus.svg" />
                             <Placeholder6 />
                           </ProgressCells>
                           <Divider13 />
@@ -2617,10 +2620,10 @@ const KPIDetail = () => {
                           <Frame3>
                             <Subtract1ButtonDeleteButtIcon
                               alt=""
-                              src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-1.svg"
+                              src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-1.svg"
                             />
                             <CellContent5>9/20</CellContent5>
-                            <Icon1 alt="" src="/icon-10.svg" />
+                            <Icon1 alt="" src="/svgA/icon-plus.svg" />
                             <Placeholder6 />
                           </Frame3>
                           <Divider13 />
@@ -2630,10 +2633,10 @@ const KPIDetail = () => {
                           <Frame4>
                             <Subtract1ButtonDeleteButtIcon
                               alt=""
-                              src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-1.svg"
+                              src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-1.svg"
                             />
                             <CellContent6>60%</CellContent6>
-                            <Icon1 alt="" src="/icon-10.svg" />
+                            <Icon1 alt="" src="/svgA/icon-plus.svg" />
                             <Placeholder6 />
                           </Frame4>
                           <Divider11 />
@@ -3122,7 +3125,7 @@ const KPIDetail = () => {
                             <ProgressCells>
                               <Subtract1ButtonDeleteButt type="checkbox" />
                               <CellContent14>32/48</CellContent14>
-                              <Icon1 alt="" src="/icon-13.svg" />
+                              <Icon1 alt="" src="/svgA/icon-plus.svg" />
                               <Placeholder6 />
                             </ProgressCells>
                             <Divider13 />
@@ -3135,7 +3138,7 @@ const KPIDetail = () => {
                                 src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
                               />
                               <CellContent14>15/20</CellContent14>
-                              <Icon1 alt="" src="/icon-13.svg" />
+                              <Icon1 alt="" src="/svgA/icon-plus.svg" />
                               <Placeholder6 />
                             </Frame14>
                             <Divider13 />
@@ -3148,7 +3151,7 @@ const KPIDetail = () => {
                                 src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
                               />
                               <CellContent13>25%</CellContent13>
-                              <Icon1 alt="" src="/icon-13.svg" />
+                              <Icon1 alt="" src="/svgA/icon-plus.svg" />
                               <Placeholder6 />
                             </Frame4>
                             <Divider11 />

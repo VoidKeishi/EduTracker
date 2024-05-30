@@ -1,7 +1,8 @@
+import { Icon } from "@mui/material";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
-const DesktopSettingV1 = () => {
+const ProfileSettings = () => {
   const navigate = useNavigate();
 
   const onButtonContainerClick = useCallback(() => {
@@ -19,7 +20,7 @@ const DesktopSettingV1 = () => {
           <div className="flex flex-col items-center justify-center p-1">
             <div className="w-10 h-10 rounded-81xl overflow-hidden shrink-0 flex flex-row items-center justify-center">
               <div className="flex flex-row items-center justify-center p-2">
-                <img className="h-6 w-6 relative" alt="" src="svgA/icon1.svg" />
+                <img className="h-6 w-6 relative" alt="" src="/svgA/icon1.svg" />
               </div>
             </div>
           </div>
@@ -78,7 +79,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
                 alt=""
-                src="svgA/icon-11.svg"
+                src="/svgA/icon-11.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -92,10 +93,7 @@ const DesktopSettingV1 = () => {
           </div>
           <div className="w-[294px] rounded-81xl overflow-hidden flex flex-row items-start justify-start py-0 pr-5 pl-0 box-border">
             <div className="flex-1 flex flex-row items-start justify-start p-4 gap-[12px]">
-              <input
-                className="m-0 h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
-                type="checkbox"
-              />
+              <img className = "h-[1.563rem] w-[1.563rem]" alt="" src="/svgA/image-5@2x" />
               <div className="w-[198px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
                   Chữ
@@ -122,7 +120,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative min-h-[24px]"
                 alt=""
-                src="svgA/icon-4.svg"
+                src="/svgA/icon-4.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -151,7 +149,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative min-h-[24px]"
                 alt=""
-                src="svgA/icon-51.svg"
+                src="/svgA/icon-51.svg"
               />
               <input
                 className="w-[260px] [border:none] [outline:none] bg-[transparent] h-[22px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border font-m3-body-medium font-semibold text-sm text-m3-sys-light-primary"
@@ -168,14 +166,14 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative object-cover min-h-[24px]"
                 alt=""
-                src="svgA/icon-61@2x.png"
+                src="/svgA/icon-61@2x.png"
               />
-              <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
+              <div className="w-[20rem] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
                   Tài khoản
                 </div>
               </div>
-              <div className="w-8 relative tracking-[0.1px] leading-[20px] font-medium text-m3-sys-light-on-surface-variant text-right hidden">
+              <div className="w-20 relative tracking-[0.1px] leading-[20px] font-medium text-m3-sys-light-on-surface-variant text-right hidden">
                 100+
               </div>
             </div>
@@ -918,7 +916,7 @@ const DesktopSettingV1 = () => {
                                   className="h-6 w-6 relative"
                                   loading="lazy"
                                   alt=""
-                                  src="svgA/iconstoday-24px.svg"
+                                  src="/svgA/iconstoday-24px.svg"
                                 />
                               </div>
                             </div>
@@ -961,7 +959,7 @@ const DesktopSettingV1 = () => {
                         <img
                           className="w-[18px] h-[18px] relative"
                           alt=""
-                          src="svgA/icon-131.svg"
+                          src="/svgA/icon-131.svg"
                         />
                       </div>
                       <div className="relative tracking-[0.1px] leading-[20px] font-medium inline-block min-w-[100px]">
@@ -975,7 +973,7 @@ const DesktopSettingV1 = () => {
                         <img
                           className="w-[18px] h-[18px] relative"
                           alt=""
-                          src="svgA/icon-14.svg"
+                          src="/svgA/icon-14.svg"
                         />
                       </div>
                       <div className="relative text-sm tracking-[0.1px] leading-[20px] font-medium font-m3-body-medium text-m3-sys-light-on-primary text-center inline-block min-w-[25px]">
@@ -992,7 +990,7 @@ const DesktopSettingV1 = () => {
                               <img
                                 className="h-6 w-6 relative overflow-hidden shrink-0"
                                 alt=""
-                                src="svgA/icon-151.svg"
+                                src="/svgA/icon-151.svg"
                               />
                             </div>
                           </div>
@@ -1039,7 +1037,7 @@ const DesktopSettingV1 = () => {
                                   <img
                                     className="h-6 w-6 relative"
                                     alt=""
-                                    src="svgA/icon1.svg"
+                                    src="/svgA/icon1.svg"
                                   />
                                 </div>
                               </div>
@@ -1074,7 +1072,7 @@ const DesktopSettingV1 = () => {
                                   <img
                                     className="h-6 w-6 relative"
                                     alt=""
-                                    src="svgA/icon1.svg"
+                                    src="/svgA/icon1.svg"
                                   />
                                 </div>
                               </div>
@@ -1109,7 +1107,7 @@ const DesktopSettingV1 = () => {
                           <img
                             className="w-[18px] h-[18px] relative"
                             alt=""
-                            src="svgA/icon-14.svg"
+                            src="/svgA/icon-14.svg"
                           />
                         </div>
                         <div className="relative text-sm tracking-[0.1px] leading-[20px] font-medium font-m3-body-medium text-m3-sys-light-on-primary text-center inline-block min-w-[25px]">
@@ -1136,4 +1134,4 @@ const DesktopSettingV1 = () => {
   );
 };
 
-export default DesktopSettingV1;
+export default ProfileSettings;
