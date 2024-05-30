@@ -13,12 +13,6 @@ import GeneralSettings from './pages/Settings/pages/GeneralSettings'
 import ProfileSettings from './pages/Settings/pages/ProfileSettings'
 import KPIDetail from './pages/KPI/pages/KPIDetail'
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-const theme = createTheme({
-   direction: 'rtl',
-});
-
 function App() {
   return (
     <BrowserRouter>
