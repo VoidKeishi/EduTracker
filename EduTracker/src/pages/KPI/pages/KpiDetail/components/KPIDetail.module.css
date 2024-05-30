@@ -4236,7 +4236,6 @@
     padding: 0;
     box-sizing: border-box;
     flex-shrink: 0;
-    debug_commit: bf4bc93;
     max-width: 100%;
     row-gap: 20px;
   }
@@ -4274,7 +4273,6 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-shrink: 0;
-    debug_commit: bf4bc93;
   }
   .table,
   .viewReportButton {

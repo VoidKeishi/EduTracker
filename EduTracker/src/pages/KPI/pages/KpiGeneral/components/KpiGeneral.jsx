@@ -8,13 +8,7 @@ import Button from '@mui/material/Button';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles'
-import { useHistory } from 'react-router-dom'
-
-const history = useHistory()
-
-const handleDetailButtonClick = () => {
-  history.push('/kpi/details')
-};
+import { useNavigate } from 'react-router-dom'
 
 const data = [
   { value: 60, color: '#006874' },
@@ -58,6 +52,12 @@ function LinearProgressWithLabel(props) {
 }
 
 function KpiGeneralInfo({KPIName, title1, value1, title2, value2, title3, value3}) {
+  const navigate = useNavigate();
+
+  const handleDetailButtonClick = useCallback(() => {
+    navigate("/kpi/details");
+  }, [navigate]);
+
   return (
     <Paper
           elevation={4}
