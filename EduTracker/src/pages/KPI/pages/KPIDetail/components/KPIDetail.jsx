@@ -1,6 +1,7 @@
-import { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { LinearProgress, Box, CircularProgress } from "@mui/material";
 import styled from "styled-components";
+import Popup from "./index";
 
 const Icon = styled.img`
   height: 1.5rem;
@@ -2233,7 +2234,9 @@ const DesktopChiTitKpiRoot = styled.div`
   letter-spacing: normal;
 `;
 
-const KPIDetail = () => {
+const KPIDetail = () =>{
+
+  const {showPopup, setShowPopup} = useState(false)
   const onTrackAchieveExcel1Click = useCallback(() => {
     // Please sync "Desktop - KPI " to the project
   }, []);
@@ -2248,6 +2251,10 @@ const KPIDetail = () => {
 
   const onVBreadcrumbsItemTextClick = useCallback(() => {
     // Please sync "Desktop - KPI " to the project
+  }, []);
+
+  const addTaskClick = useCallback(() => {
+    setShowPopup(true)
   }, []);
 
   return (
@@ -2802,9 +2809,10 @@ const KPIDetail = () => {
                       </ImageText3>
                     </TableContent>
                     <ViewReportButton>
-                      <Button4>
+                      <Button4 onClick={addTaskClick}>
                         <StateLayer3>
                           <LabelText1>+ Công việc mới</LabelText1>
+                          {showPopup && <Popup />}
                         </StateLayer3>
                       </Button4>
                     </ViewReportButton>
@@ -3324,9 +3332,10 @@ const KPIDetail = () => {
                 </TableContainer>
               </CustomerStats>
               <ButtonWrapper>
-                <Button4>
+                <Button4 onClick={addTaskClick}>
                   <StateLayer3>
                     <LabelText1>+ Công việc mới</LabelText1>
+                    {showPopup && <Popup />}
                   </StateLayer3>
                 </Button4>
               </ButtonWrapper>

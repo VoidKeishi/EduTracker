@@ -11,7 +11,7 @@ import KpiGeneral from './pages/KPI/pages/KPIGeneral'
 import Task from './pages/Task'
 import GeneralSettings from './pages/Settings/pages/GeneralSettings'
 import ProfileSettings from './pages/Settings/pages/ProfileSettings'
-import KPIDetail from './pages/KPI/pages/KPIDetail'
+import KPIDetail from './pages/KPI/pages/KPIDetail/components'
 
 function App() {
   return (
