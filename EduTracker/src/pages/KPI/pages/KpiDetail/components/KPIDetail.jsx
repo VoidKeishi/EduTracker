@@ -1244,8 +1244,21 @@ const CellContent4 = styled.div`
   color: rgba(0, 0, 0, 0.87);
   text-align: center;
   display: inline-block;
-  min-width: 2.438rem;
+  min-width: 1.938rem;
 `;
+
+const CellContent5 = styled.div`
+  position: relative;
+  font-size: 0.875rem;
+  letter-spacing: 0.25px;
+  line-height: 1.25rem;
+  font-family: Roboto;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: right;
+  display: inline-block;
+  min-width: 1.938rem;
+`;
+
 const Placeholder6 = styled.div`
   height: 1rem;
   width: 5.313rem;
@@ -1260,7 +1273,7 @@ const ProgressCells = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.785rem 1.5rem;
+  padding: 0.875rem 2.125rem;
   gap: 0.937rem;
 `;
 const Divider13 = styled.div`
@@ -1302,17 +1315,6 @@ const Subtract1ButtonDeleteButtIcon = styled.img`
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
-`;
-const CellContent5 = styled.div`
-  position: relative;
-  font-size: 0.875rem;
-  letter-spacing: 0.25px;
-  line-height: 1.25rem;
-  font-family: Roboto;
-  color: rgba(0, 0, 0, 0.87);
-  text-align: right;
-  display: inline-block;
-  min-width: 1.938rem;
 `;
 const Frame3 = styled.div`
   display: flex;
@@ -2138,7 +2140,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 const PageContent = styled.div`
-  width: 74.25rem;
+  width:  150rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -2258,179 +2260,8 @@ const KPIDetail = () => {
         </Container>
       </IconButton>
       <DesktopChiTitKpiChild />
-      <AppbarContent>
-        <KPIButtons>
-          <Button>
-            <VIcon>menu</VIcon>
-            <Span>DI</Span>
-          </Button>
-          <AchieveExcelButton>
-            <TrackAchieveExcel
-              loading="lazy"
-              alt=""
-              src="/track-achieve-excel-1@2x.png"
-              onClick={onTrackAchieveExcel1Click}
-            />
-          </AchieveExcelButton>
-        </KPIButtons>
-        <Divider1>
-          <Divider />
-        </Divider1>
-        <SearchDarkmode>
-          <SearchBar>
-            <RectangleParent>
-              <FrameChild />
-              <SearchIcon alt="" src="/search-icon.svg" />
-              <TmKimG>Tìm kiếm gì đó nào</TmKimG>
-            </RectangleParent>
-          </SearchBar>
-          <SettingsButtons>
-            <NotificationButton>
-              <Button1>
-                <IconssettingsFilled24px alt="" />
-                <NotificationsIcon
-                  loading="lazy"
-                  alt=""
-                  src="/notifications.svg"
-                />
-              </Button1>
-            </NotificationButton>
-            <Button2>
-              <NotificationsIcon loading="lazy" alt="" src="/dark-mode.svg" />
-              <Span1>DI</Span1>
-            </Button2>
-            <UserImagesButton>
-              <Button3 onClick={onButtonContainerClick}>
-                <UserImagesuserImages
-                  loading="lazy"
-                  alt=""
-                  src="/user-imagesuser-images.svg"
-                />
-                <Span1>DI</Span1>
-              </Button3>
-            </UserImagesButton>
-          </SettingsButtons>
-        </SearchDarkmode>
-      </AppbarContent>
       <Navigation1>
-        <NavigationDrawer>
-          <Headline>
-            <Title>Title</Title>
-          </Headline>
-          <SectionHeader>
-            <StateLayer1>
-              <NotificationsIcon alt="" />
-              <TrangCh>Trang chủ</TrangCh>
-              <BadgeLabelText>100+</BadgeLabelText>
-            </StateLayer1>
-          </SectionHeader>
-          <NavItem>
-            <StateLayer2>
-              <Icon1 alt="" />
-              <LabelText>Tạo mới</LabelText>
-            </StateLayer2>
-          </NavItem>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Công việc đã đăng ký</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Lịch sử KPI</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Bảng tin</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <Divider3>
-            <Divider2 />
-          </Divider3>
-          <SectionHeader1>
-            <GraphBarIncreaseUpProduct>
-              <GraphBarIncreaseUpProductIcon
-                loading="lazy"
-                alt=""
-                src="/graphbarincreaseupproductperformanceincreasearrowgraphbusinesschart.svg"
-              />
-            </GraphBarIncreaseUpProduct>
-            <Kpi>KPI</Kpi>
-          </SectionHeader1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Label</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Label</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Label</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <Divider3>
-            <Divider2 />
-          </Divider3>
-          <SectionHeader2 onClick={onSectionHeader3Click}>
-            <VectorIcon alt="" src="/vector-1.svg" />
-            <Label1>Công việc</Label1>
-          </SectionHeader2>
-          <SectionHeader3>
-            <NewsmodeIcon loading="lazy" alt="" src="/newsmode.svg" />
-            <Label2>Bảng tin</Label2>
-          </SectionHeader3>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Label</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-          <NavItem1>
-            <StateLayer1>
-              <Icon alt="" />
-              <Label>Label</Label>
-              <BadgeLabelText1>100+</BadgeLabelText1>
-            </StateLayer1>
-          </NavItem1>
-        </NavigationDrawer>
         <Content>
-          <BreadcrumbsDarkmode>
-            <BreadcrumbDivider>
-              <Breadcrumbs>
-                <VBreadcrumbsItem onClick={onVBreadcrumbsItemTextClick}>
-                  KPI
-                </VBreadcrumbsItem>
-                <Divider4>
-                  <BreadcrumbSeparator>\</BreadcrumbSeparator>
-                </Divider4>
-                <VBreadcrumbsItem1>Chi tiết KPI</VBreadcrumbsItem1>
-                <Divider5>
-                  <Div>\</Div>
-                </Divider5>
-                <VBreadcrumbsItem2>Link 2</VBreadcrumbsItem2>
-              </Breadcrumbs>
-              <HorizontalDarkinsetDark>
-                <Divider6 />
-              </HorizontalDarkinsetDark>
-            </BreadcrumbDivider>
             <PageContent>
               <PageContentChild />
               <PageHeader>
@@ -3497,7 +3328,6 @@ const KPIDetail = () => {
                 </Button5>
               </ButtonWrapper>
             </PageContent>
-          </BreadcrumbsDarkmode>
         </Content>
       </Navigation1>
     </DesktopChiTitKpiRoot>
