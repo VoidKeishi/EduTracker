@@ -6,6 +6,8 @@ import { themeOption } from './utils/theme.js'
 import { ThemeProvider } from '@mui/material/styles'
 import { AppProvider } from './context/AppContext.jsx'
 import { UIProvider } from './context/UIContext.jsx'
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,7 +15,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <AppProvider>
         <UIProvider>
           <ThemeProvider theme={themeOption}>
-            <App />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <App />
+            </LocalizationProvider>
           </ThemeProvider>
         </UIProvider>
       </AppProvider>

@@ -9,7 +9,7 @@ const TopBar = () => {
   const uiContext = useContext(UIContext)
 
   return (
-    <div className={styles.rectangleParent}>
+    <div className={styles.rectangleParent} style={{ maxWidth: '420px' }}>
       <div className={styles.groupChild} />
       <img
         className={styles.menuIcon}

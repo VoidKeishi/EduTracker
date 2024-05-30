@@ -1,0 +1,36 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  width: 430px;
+  height: 56px;
+  font-size: 16px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 16px;
+  left: 374px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.chiTitKpi1 {
+  position: absolute;
+  top: 18px;
+  left: 70px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.keyboardBackspaceIcon {
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}

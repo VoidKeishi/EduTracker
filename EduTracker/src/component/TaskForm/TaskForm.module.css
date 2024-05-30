@@ -1,0 +1,13 @@
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 306px;
+  height: 130px;
+  text-align: left;
+  font-size: 16px;
+  color: #171d1e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

@@ -1,0 +1,267 @@
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 12px;
+  background-color: #f5fafb;
+  border: 1px solid #cac4d0;
+  box-sizing: border-box;
+  width: 362px;
+  height: 366px;
+}
+.icon {
+  width: 18px;
+  position: relative;
+  height: 18px;
+}
+.labelText {
+  position: relative;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.stateLayer {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px 10px 16px;
+  gap: 8px;
+}
+.button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 100px;
+  border: 1px solid #6f797a;
+  box-sizing: border-box;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.action {
+  position: absolute;
+  top: 148px;
+  left: 143px;
+  width: 167px;
+  height: 40px;
+}
+.content {
+  width: 121px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4px 0px;
+  box-sizing: border-box;
+  position: relative;
+}
+.stateLayer1 {
+  align-self: stretch;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px 0px 4px 16px;
+}
+
+.addTask {
+  position: absolute;
+  top: 164px;
+  left: 24px;
+  width: 310px;
+  height: 188px;
+  color: #006874;
+}
+.divider {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid #3f484a;
+  box-sizing: border-box;
+  height: 1px;
+}
+.horizontalDarkinsetDark {
+  position: absolute;
+  top: 140px;
+  left: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 0px 0px 16px;
+  box-sizing: border-box;
+}
+.gingDy {
+  margin: 0;
+}
+.gingDyContainer {
+  position: absolute;
+  top: 77px;
+  left: 26px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  text-align: left;
+}
+.horizontalDarkinsetDark1 {
+  position: absolute;
+  top: 61px;
+  left: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0px 0px 0px 16px;
+  box-sizing: border-box;
+}
+.oop {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.vectorIcon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  z-index: 0;
+}
+.vectorIcon1 {
+  width: 75%;
+  position: absolute;
+  margin: 0 !important;
+  height: 75%;
+  top: 12.5%;
+  right: 12.5%;
+  bottom: 12.5%;
+  left: 12.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  z-index: 1;
+}
+.edit {
+  width: 24px;
+  border-radius: 50px;
+  background-color: #cde7ec;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+.editWrapper {
+  position: absolute;
+  top: 0px;
+  left: 280px;
+  border-radius: 50px;
+  background-color: #cde7ec;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  position: absolute;
+  top: 17px;
+  left: 24px;
+  width: 306px;
+  height: 26px;
+  font-size: 16px;
+}
+.card {
+  position: absolute;
+  top: 156px;
+  left: 29px;
+  width: 362px;
+  height: 366px;
+}
+.gingDy1 {
+  position: absolute;
+  top: 92px;
+  left: 32px;
+  font-size: 22px;
+  line-height: 28px;
+}
+.topbarChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 430px;
+  height: 56px;
+}
+.searchIcon {
+  position: absolute;
+  top: 16px;
+  left: 374px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.chiTitKpi1 {
+  position: absolute;
+  top: 18px;
+  left: 70px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.keyboardBackspaceIcon {
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.topbar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 430px;
+  height: 56px;
+  font-size: 16px;
+}
+.chiTitKpi {
+  width: 100%;
+  position: relative;
+  background-color: #f5fafb;
+  height: 932px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  font-family: Roboto;
+}
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 306px;
+  height: 130px;
+  text-align: left;
+  font-size: 16px;
+  color: #171d1e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

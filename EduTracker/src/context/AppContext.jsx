@@ -1,14 +1,16 @@
 import { createContext, useState } from 'react'
-import { user } from '../data'
+import { user, kpi } from '../data'
 
 export const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
   const [userData, setUserData] = useState(user.sensei)
-
+  const [kpiData, setKpiData] = useState(kpi)
   const contextValue = {
     userData,
-    setUserData
+    setUserData,
+    kpiData,
+    setKpiData
   }
 
   return (

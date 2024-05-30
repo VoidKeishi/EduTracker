@@ -14,7 +14,7 @@ const NavigationDrawer = ({ currentPage }) => {
 
   return (
     <div
-      style={uiContext.sideBar ? {} : { display: 'none' }}
+      style={uiContext.sideBar ? {} : { display: 'none', width: '100%' }}
       className={styles.navigationDrawer}
     >
       <div

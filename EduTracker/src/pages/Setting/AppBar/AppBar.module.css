@@ -1,0 +1,52 @@
+.groupChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  width: 430px;
+  height: 56px;
+}
+.menuIcon {
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.searchIcon {
+  width: 24px;
+  position: relative;
+  border-radius: 12px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.searchWrapper {
+  position: absolute;
+  top: 16px;
+  left: 374px;
+  border-radius: 50px;
+  background-color: #9eeffd;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.trackAchieveExcel11 {
+  position: absolute;
+  top: 10px;
+  left: 72px;
+  width: 120px;
+  height: 36px;
+  object-fit: cover;
+}
+.rectangleParent {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 56px;
+  z-index: 999;
+}
