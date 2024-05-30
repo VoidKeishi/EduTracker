@@ -83,7 +83,16 @@ function Layout() {
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
-
+  
+  const handleAccountClick = () => {
+    handleMenuClose();
+    navigate('/account');
+  };
+  
+  const handleSettingsClick = () => {
+    handleMenuClose();
+    navigate('/settings');
+  };
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -104,8 +113,8 @@ function Layout() {
         top: "3%",
       }}
     >
-      <MenuItem onClick={handleMenuClose}>Tài Khoản</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Cài Đặt</MenuItem>
+      <MenuItem onClick={handleAccountClick}>Tài Khoản</MenuItem>
+      <MenuItem onClick={handleSettingsClick}>Cài Đặt</MenuItem>
     </Menu>
   );
 

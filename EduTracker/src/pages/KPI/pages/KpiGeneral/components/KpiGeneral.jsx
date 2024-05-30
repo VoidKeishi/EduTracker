@@ -10,8 +10,8 @@ import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles'
 
 const data = [
-  { value: 40, color: '#006874' },
-  { value: 10, color: '#e6f0e9' },
+  { value: 60, color: '#006874' },
+  { value: 40, color: '#e6f0e9' },
 ];
 
 const size = {

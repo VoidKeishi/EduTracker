@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
@@ -8,22 +9,27 @@ import ResetPassword from './pages/ForgotPassword/ResetPassword'
 import CreateKpi from './pages/KPI/pages/CreateKpi'
 import KpiGeneral from './pages/KPI/pages/KpiGeneral'
 import Task from './pages/Task'
+import GeneralSettings from './pages/Settings/pages/GeneralSettings'
+import ProfileSettings from './pages/Settings/pages/ProfileSettings'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SignUp />} />
-        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
         <Route path='/' element={<Layout />}>
           <Route path='/kpi' element={<KPI />}>
             <Route path='' element={<KpiGeneral />} />
             <Route path='create-kpi' element={<CreateKpi />} />
+
           </Route>
           <Route path='/task' element={<Task />} />
-        </Route>
+          <Route path='/account' element={<ProfileSettings />} />
+          <Route path='/settings' element={<GeneralSettings />} />         
+          </Route>
       </Routes>
     </BrowserRouter>
   )

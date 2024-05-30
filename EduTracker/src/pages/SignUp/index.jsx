@@ -187,7 +187,7 @@ function SignUp() {
           <span style={{ marginRight: '1.5rem' }}>Đã có tài khoản?</span>
           <Link
             style={{ textDecoration: 'none', color: '#006874' }}
-            to={'/sign-in'}
+            to={'/'}
           >
             Đăng nhập
           </Link>

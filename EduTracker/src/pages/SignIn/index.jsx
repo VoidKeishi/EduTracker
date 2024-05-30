@@ -147,7 +147,7 @@ function SignIn() {
         </Box>
         <Box sx={{ fontWeight: 'bold' }}>
           <span style={{ marginRight: '1.5rem' }}>Chưa có tài khoản?</span>
-          <Link style={{ textDecoration: 'none', color: '#006874' }} to={'/'}>
+          <Link style={{ textDecoration: 'none', color: '#006874' }} to={'/sign-up'}>
             Tạo tài khoản
           </Link>
         </Box>
