@@ -5,21 +5,21 @@ const DesktopSettingV1 = () => {
   const navigate = useNavigate();
 
   const onButtonContainerClick = useCallback(() => {
-    navigate("/desktop-setting-v1");
+    navigate("/settings");
   }, [navigate]);
 
   const onSectionHeader1Click = useCallback(() => {
-    navigate("/desktop-setting-v1");
+    navigate("/settings");
   }, [navigate]);
 
   return (
-    <div className="relative bg-schemes-surface w-full overflow-x-auto flex flex-col items-start justify-start gap-[1px] leading-[normal] tracking-[normal]">
-      <div className="w-[402px] !m-[0] absolute bottom-[384px] left-[441px] rounded box-border flex flex-col items-start justify-start z-[2] border-[1px] border-solid border-schemes-outline">
+    <div className="relative bg-schemes-surface w-full overflow-x-auto flex flex-col items-start justify-start gap-[0.062rem] leading-[normal] tracking-[normal] text-left text-[0.875rem] text-m3-sys-light-on-surface-variant font-m3-body-medium">
+      <div className="w-[25.2rem] !m-[0] absolute bottom-[24rem] left-[27.6rem] rounded box-border flex flex-col items-start justify-start z-[2] border-[1px] border-solid border-schemes-outline">
         <div className="self-stretch rounded-t rounded-b-none flex flex-row flex-wrap items-start justify-start py-1 px-0 [row-gap:20px]">
           <div className="flex flex-col items-center justify-center p-1">
             <div className="w-10 h-10 rounded-81xl overflow-hidden shrink-0 flex flex-row items-center justify-center">
               <div className="flex flex-row items-center justify-center p-2">
-                <img className="h-6 w-6 relative" alt="" src="/icon1.svg" />
+                <img className="h-6 w-6 relative" alt="" src="svgA/icon1.svg" />
               </div>
             </div>
           </div>
@@ -42,85 +42,6 @@ const DesktopSettingV1 = () => {
           </div>
         </div>
       </div>
-      <header className="w-[1440px] h-14 bg-m3-sys-light-primary overflow-hidden shrink-0 flex flex-row items-start justify-between pt-1 px-4 pb-[1.2px] box-border top-[0] z-[99] sticky gap-[20px] max-w-full text-center text-5xl text-m3-sys-light-on-primary font-icon-medium">
-        <div className="self-stretch w-[193px] flex flex-row items-start justify-start">
-          <div className="rounded-21xl flex flex-row items-start justify-start p-3">
-            <h2 className="m-0 relative text-inherit leading-[100%] font-normal font-inherit inline-block min-w-[24px]">
-              menu
-            </h2>
-            <div className="w-[23px] relative leading-[20px] font-m3-body-medium text-black-087 hidden">
-              DI
-            </div>
-          </div>
-          <div className="self-stretch flex-1 flex flex-col items-start justify-start pt-[2.2px] px-0 pb-0">
-            <img
-              className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover"
-              loading="lazy"
-              alt=""
-              src="/track-achieve-excel-1@2x.png"
-            />
-          </div>
-        </div>
-        <div className="w-[360px] hidden flex-col items-start justify-end max-w-full">
-          <div className="self-stretch h-px relative box-border border-t-[1px] border-solid border-m3-sys-light-surface-container-highest" />
-        </div>
-        <div className="h-12 w-[498px] flex flex-row items-end justify-start gap-[28px] max-w-full text-black-087 font-m3-body-medium">
-          <div className="flex-1 flex flex-col items-start justify-end pt-0 px-0 pb-[5px]">
-            <button className="cursor-pointer [border:none] pt-[10.8px] px-3 pb-2.5 bg-whitesmoke self-stretch rounded-21xl flex flex-row items-start justify-start gap-[48px] whitespace-nowrap hover:bg-gainsboro">
-              <div className="h-[37px] w-[315px] relative rounded-21xl bg-whitesmoke hidden" />
-              <img
-                className="h-4 w-4 relative min-h-[16px] z-[1]"
-                alt=""
-                src="/vector.svg"
-              />
-              <a className="[text-decoration:none] w-[157.5px] relative text-mini tracking-[0.5px] leading-[16px] font-medium font-m3-body-medium text-m3-sys-light-primary text-center inline-block shrink-0 z-[1] mq450:hidden">
-                Tìm kiếm gì đó nào
-              </a>
-            </button>
-          </div>
-          <div className="self-stretch w-[155px] flex flex-row items-start justify-start gap-[12.9px]">
-            <div className="flex-1 flex flex-col items-start justify-start py-0 pr-1 pl-0">
-              <div className="w-[44.3px] h-12 rounded-21xl flex flex-row items-center justify-center py-0 px-2.5 box-border">
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0 hidden"
-                  alt=""
-                />
-                <img
-                  className="h-6 w-6 relative overflow-hidden shrink-0"
-                  loading="lazy"
-                  alt=""
-                  src="/notifications.svg"
-                />
-              </div>
-            </div>
-            <div className="self-stretch flex-[0.603] rounded-21xl flex flex-row items-center justify-center py-0 px-2.5">
-              <img
-                className="h-6 w-6 relative overflow-hidden shrink-0"
-                loading="lazy"
-                alt=""
-                src="/dark-mode1.svg"
-              />
-              <div className="w-[23px] relative leading-[20px] hidden">DI</div>
-            </div>
-            <div className="flex flex-col items-start justify-start pt-1.5 px-0 pb-0">
-              <div
-                className="rounded-21xl bg-m3-sys-light-on-primary flex flex-row items-start justify-start p-1.5 cursor-pointer"
-                onClick={onButtonContainerClick}
-              >
-                <img
-                  className="h-6 w-6 relative rounded-81xl overflow-hidden shrink-0"
-                  loading="lazy"
-                  alt=""
-                  src="/user-imagesuser-images.svg"
-                />
-                <div className="w-[23px] relative leading-[20px] hidden">
-                  DI
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
       <main className="w-[1440px] flex flex-row flex-wrap items-start justify-start [row-gap:20px] max-w-full text-left text-sm text-m3-sys-dark-inverse-on-surface font-m3-body-medium">
         <div className="w-[360px] rounded-2xl bg-m3-sys-light-surface-container-low overflow-hidden shrink-0 flex flex-col items-start justify-start pt-[52.5px] px-3 pb-[617px] box-border max-w-full z-[1] lg:pt-[34px] lg:pb-[401px] lg:box-border mq450:pt-[22px] mq450:pb-[261px] mq450:box-border">
           <div className="w-[121px] flex flex-row items-start justify-start pt-0 pb-[2.5px] pr-5 pl-0 box-border text-schemes-outline">
@@ -137,7 +58,7 @@ const DesktopSettingV1 = () => {
               </b>
             </div>
           </div>
-          <div className="self-stretch flex flex-row items-start justify-start py-[18px] pr-2 pl-4 text-6xl">
+          <div className="self-stretch flex flex-row items-start justify-start py-[18px] pr-2 pl-4 text-xl">
             <h2 className="m-0 flex-1 relative text-inherit tracking-[0.1px] leading-[20px] font-medium font-inherit mq750:text-xl mq750:leading-[16px]">
               Cài đặt
             </h2>
@@ -157,7 +78,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
                 alt=""
-                src="/icon-11.svg"
+                src="svgA/icon-11.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -201,7 +122,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative min-h-[24px]"
                 alt=""
-                src="/icon-4.svg"
+                src="svgA/icon-4.svg"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -230,7 +151,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative min-h-[24px]"
                 alt=""
-                src="/icon-51.svg"
+                src="svgA/icon-51.svg"
               />
               <input
                 className="w-[260px] [border:none] [outline:none] bg-[transparent] h-[22px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border font-m3-body-medium font-semibold text-sm text-m3-sys-light-primary"
@@ -247,7 +168,7 @@ const DesktopSettingV1 = () => {
               <img
                 className="h-6 w-6 relative object-cover min-h-[24px]"
                 alt=""
-                src="/icon-61@2x.png"
+                src="svgA/icon-61@2x.png"
               />
               <div className="w-[260px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                 <div className="self-stretch relative tracking-[0.1px] leading-[20px] font-medium">
@@ -997,7 +918,7 @@ const DesktopSettingV1 = () => {
                                   className="h-6 w-6 relative"
                                   loading="lazy"
                                   alt=""
-                                  src="/iconstoday-24px.svg"
+                                  src="svgA/iconstoday-24px.svg"
                                 />
                               </div>
                             </div>
@@ -1040,7 +961,7 @@ const DesktopSettingV1 = () => {
                         <img
                           className="w-[18px] h-[18px] relative"
                           alt=""
-                          src="/icon-131.svg"
+                          src="svgA/icon-131.svg"
                         />
                       </div>
                       <div className="relative tracking-[0.1px] leading-[20px] font-medium inline-block min-w-[100px]">
@@ -1054,7 +975,7 @@ const DesktopSettingV1 = () => {
                         <img
                           className="w-[18px] h-[18px] relative"
                           alt=""
-                          src="/icon-14.svg"
+                          src="svgA/icon-14.svg"
                         />
                       </div>
                       <div className="relative text-sm tracking-[0.1px] leading-[20px] font-medium font-m3-body-medium text-m3-sys-light-on-primary text-center inline-block min-w-[25px]">
@@ -1071,7 +992,7 @@ const DesktopSettingV1 = () => {
                               <img
                                 className="h-6 w-6 relative overflow-hidden shrink-0"
                                 alt=""
-                                src="/icon-151.svg"
+                                src="svgA/icon-151.svg"
                               />
                             </div>
                           </div>
@@ -1118,7 +1039,7 @@ const DesktopSettingV1 = () => {
                                   <img
                                     className="h-6 w-6 relative"
                                     alt=""
-                                    src="/icon1.svg"
+                                    src="svgA/icon1.svg"
                                   />
                                 </div>
                               </div>
@@ -1153,7 +1074,7 @@ const DesktopSettingV1 = () => {
                                   <img
                                     className="h-6 w-6 relative"
                                     alt=""
-                                    src="/icon1.svg"
+                                    src="svgA/icon1.svg"
                                   />
                                 </div>
                               </div>
@@ -1188,7 +1109,7 @@ const DesktopSettingV1 = () => {
                           <img
                             className="w-[18px] h-[18px] relative"
                             alt=""
-                            src="/icon-14.svg"
+                            src="svgA/icon-14.svg"
                           />
                         </div>
                         <div className="relative text-sm tracking-[0.1px] leading-[20px] font-medium font-m3-body-medium text-m3-sys-light-on-primary text-center inline-block min-w-[25px]">

@@ -106,11 +106,11 @@ const GeneralSettings = () => {
                   type="checkbox"
                 />
                 <div className="w-[16.25rem] flex flex-col items-start justify-start pt-[0.125rem] px-[0rem] pb-[0rem] box-border">
-                  <div className="self-stretch relative tracking-[0.1px] leading-[1.25rem] font-medium">
+                  <div className="self-stretch relative tracking-[0.00625rem] leading-[1.25rem] font-medium">
                     Chữ
                   </div>
                 </div>
-                <div className="w-[5.813rem] relative tracking-[0.1px] leading-[1.25rem] font-medium text-right hidden">
+                <div className="w-[5.813rem] relative tracking-[0.00625rem] leading-[1.25rem] font-medium text-right hidden">
                   14h10 - 17h30
                 </div>
               </div>

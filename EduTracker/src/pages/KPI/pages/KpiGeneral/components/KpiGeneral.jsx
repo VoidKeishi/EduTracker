@@ -8,6 +8,13 @@ import Button from '@mui/material/Button';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles'
+import { useHistory } from 'react-router-dom'
+
+const history = useHistory()
+
+const handleDetailButtonClick = () => {
+  history.push('/kpi/details')
+};
 
 const data = [
   { value: 60, color: '#006874' },
@@ -160,6 +167,7 @@ function KpiGeneralInfo({KPIName, title1, value1, title2, value2, title3, value3
               <Box>
                 <Button
                   variant="outlined"
+                  onClick = {handleDetailButtonClick}
                   sx={{
                     borderRadius: '50px',
                     fontSize: '0.75rem'

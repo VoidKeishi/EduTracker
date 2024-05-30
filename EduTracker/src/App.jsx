@@ -24,6 +24,7 @@ function App() {
           <Route path='/kpi' element={<KPI />}>
             <Route path='' element={<KpiGeneral />} />
             <Route path='create-kpi' element={<CreateKpi />} />
+            <Route path='details' element={<KPIDetail/>} />
 
           </Route>
           <Route path='/task' element={<Task />} />
