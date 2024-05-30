@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -131,7 +131,9 @@ function Layout() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Logo />
+          <Link to={"/kpi"}>
+            <Logo />
+          </Link>
           
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -176,112 +178,119 @@ function Layout() {
           sx={{
             display: "flex",
             marginTop: "4rem",
-            backgroundColor: "#CDE7EC",
+            backgroundColor: location.pathname.includes("settings") ? "#FFFFFF" : "#CDE7EC",
           }}
         >
-          <Box sx={{
-            maxWidth: "10rem",
-            minWidth: "10rem",
-            position: "fixed",
-            zIndex: "1",
-            height: "100%"
-          }}>
-            <Paper 
-              elevation={4}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "1.5rem",
-                height: "100%",
-                paddingTop: "1.5rem",
-                borderRadius: "1rem",
-              }}
-            >
-              <Box
+          {
+            location.pathname.includes("settings")
+            ? null
+            : (
+              <Box sx={{
+              maxWidth: "10rem",
+              minWidth: "10rem",
+              position: "fixed",
+              zIndex: "1",
+              height: "100%"
+            }}>
+              <Paper 
+                elevation={4}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
                   alignItems: "center",
-                  gap: "0.3rem"
+                  gap: "1.5rem",
+                  height: "100%",
+                  paddingTop: "1.5rem",
+                  borderRadius: "1rem",
                 }}
               >
-                <Button
+                <Box
                   sx={{
-                    color: "black",
-                    backgroundColor: () => currentLocation == '/kpi' ? "#9EEFFD" : "#FFFFFF",
-                    '&:hover': {
-                      backgroundColor: "#9EEFFD"
-                    }
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "0.3rem"
                   }}
-                  onClick={() => navigate('/kpi')}
                 >
-                  <KPI />
-                </Button>
-                <Typography variant="body1">
-                  KPI
-                </Typography>
-              </Box>
+                  <Button
+                    sx={{
+                      color: "black",
+                      backgroundColor: () => currentLocation == '/kpi' ? "#9EEFFD" : "#FFFFFF",
+                      '&:hover': {
+                        backgroundColor: "#9EEFFD"
+                      }
+                    }}
+                    onClick={() => navigate('/kpi')}
+                  >
+                    <KPI />
+                  </Button>
+                  <Typography variant="body1">
+                    KPI
+                  </Typography>
+                </Box>
 
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "0.3rem"
-                }}
-              >
-                <Button
+                <Box
                   sx={{
-                    color: "black",
-                    backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
-                    '&:hover': {
-                      backgroundColor: "#9EEFFD"
-                    }                    
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "0.3rem"
                   }}
-                  onClick={() => navigate('/task')}
                 >
-                  <WorkOutlineRoundedIcon />
-                </Button>
-                <Typography variant="body1">
-                  Công việc
-                </Typography>
-              </Box>
+                  <Button
+                    sx={{
+                      color: "black",
+                      backgroundColor: () => currentLocation == '/task' ? "#9EEFFD" : "#FFFFFF",
+                      '&:hover': {
+                        backgroundColor: "#9EEFFD"
+                      }                    
+                    }}
+                    onClick={() => navigate('/task')}
+                  >
+                    <WorkOutlineRoundedIcon />
+                  </Button>
+                  <Typography variant="body1">
+                    Công việc
+                  </Typography>
+                </Box>
 
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  gap: "0.3rem"
-                }}
-              >
-                <Button
+                <Box
                   sx={{
-                    color: "black",
-                    // backgroundColor: () => currentLocation == '/news' ? "#9EEFFD" : "#FFFFFF",
-                    // '&:hover': {
-                    //   backgroundColor: "#9EEFFD"
-                    // }
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "0.3rem"
                   }}
-                  onClick={() => navigate('/kpi')}
                 >
-                  <ArticleOutlinedIcon />
-                </Button>
-                <Typography variant="body1">
-                  Bảng tin
-                </Typography>
+                  <Button
+                    sx={{
+                      color: "black",
+                      // backgroundColor: () => currentLocation == '/news' ? "#9EEFFD" : "#FFFFFF",
+                      // '&:hover': {
+                      //   backgroundColor: "#9EEFFD"
+                      // }
+                    }}
+                    onClick={() => navigate('/kpi')}
+                  >
+                    <ArticleOutlinedIcon />
+                  </Button>
+                  <Typography variant="body1">
+                    Bảng tin
+                  </Typography>
+                </Box>
+              </Paper>
               </Box>
-            </Paper>
-          </Box>
+            )
+          }
+          
           <Box
             sx={{
-              marginLeft: "13.5rem",
+              marginLeft: !location.pathname.includes("settings") ? "13.5rem" : "0rem",
               marginRight: "2.5rem",
-              marginTop: "2rem",
+              marginTop: !location.pathname.includes("settings") ? "2rem" : "0rem",
               maxWidth: "103rem",
               minWidth: "103rem",
             }}
