@@ -2133,7 +2133,7 @@ const ButtonWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 0rem 0rem 0rem 8.75rem;
+  padding: 0rem 0rem 0rem 7rem;
   @media screen and (max-width: 450px) {
     padding-left: 1.25rem;
     box-sizing: border-box;
@@ -3324,11 +3324,11 @@ const KPIDetail = () => {
                 </TableContainer>
               </CustomerStats>
               <ButtonWrapper>
-                <Button5>
+                <Button4>
                   <StateLayer3>
                     <LabelText1>+ Công việc mới</LabelText1>
                   </StateLayer3>
-                </Button5>
+                </Button4>
               </ButtonWrapper>
             </PageContent>
         </Content>
