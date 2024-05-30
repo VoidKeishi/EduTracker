@@ -1125,7 +1125,7 @@ const ColumnHeaders1 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1rem 0.625rem;
+  padding: 0.85rem 1rem 0.625rem;
   position: relative;
   gap: 0.625rem;
 `;
@@ -1517,7 +1517,7 @@ const Frame8 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.875rem;
+  padding: 0.85rem 1.875rem;
   position: relative;
 `;
 const Frame9 = styled.div`
@@ -1817,7 +1817,7 @@ const ColumnHeaders5 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1rem 0.625rem;
+  padding: 0.85rem 1rem 0.625rem;
   position: relative;
   gap: 0.625rem;
   text-align: center;
@@ -2271,7 +2271,7 @@ const KPIDetail = () => {
                       <ClassLessonStreamlineCoreIcon
                         loading="lazy"
                         alt=""
-                        src="/classlessonstreamlinecoresvg.svg"
+                        src="/svgA/classlessonstreamlinecoresvg.svg"
                       />
                     </ClassIconTitle>
                     <Title1>Giảng dạy</Title1>
@@ -2954,7 +2954,10 @@ const KPIDetail = () => {
                           </ColumnHeaders6>
                           <CellElements12>
                             <ProgressCells>
-                              <Subtract1ButtonDeleteButt type="checkbox" />
+                            <Subtract1ButtonDeleteButtIcon
+                                alt=""
+                                src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
+                              />
                               <CellContent14>32/48</CellContent14>
                               <Icon1 alt="" src="/svgA/icon-plus.svg" />
                               <Placeholder6 />
@@ -2966,7 +2969,7 @@ const KPIDetail = () => {
                             <Frame14>
                               <Subtract1ButtonDeleteButtIcon
                                 alt=""
-                                src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
+                                src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
                               />
                               <CellContent14>15/20</CellContent14>
                               <Icon1 alt="" src="/svgA/icon-plus.svg" />
@@ -2979,7 +2982,7 @@ const KPIDetail = () => {
                             <Frame4>
                               <Subtract1ButtonDeleteButtIcon
                                 alt=""
-                                src="/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
+                                src="/svgA/subtract1buttondeletebuttonssubtracthorizontalremovelineaddmathematicsmathminus-4.svg"
                               />
                               <CellContent13>25%</CellContent13>
                               <Icon1 alt="" src="/svgA/icon-plus.svg" />
