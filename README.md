@@ -7,5 +7,6 @@ npm install
 npm install -D tailwindcss postcss autoprefixer
 npm i css
 npm i styled-components
+npm i react-modal
 
 npm run dev
