@@ -101,10 +101,7 @@ const GeneralSettings = () => {
           <div className="self-stretch flex flex-col items-start justify-start max-w-full">
             <div className="self-stretch rounded-81xl overflow-hidden flex flex-row items-start justify-start max-w-full">
               <div className="flex-1 flex flex-row items-start justify-start p-[1rem] box-border gap-[0.75rem] max-w-full">
-                <input
-                  className="m-0 h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem]"
-                  type="checkbox"
-                />
+                <img className="h-[1.5rem] w-[1.5rem] relative" alt="" src = "/svgA/icon-word.svg" />
                 <div className="w-[16.25rem] flex flex-col items-start justify-start pt-[0.125rem] px-[0rem] pb-[0rem] box-border">
                   <div className="self-stretch relative tracking-[0.00625rem] leading-[1.25rem] font-medium">
                     Chữ
