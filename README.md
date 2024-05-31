@@ -10,3 +10,4 @@ npm i styled-components
 npm i react-modal
 
 npm run dev
+# Desktop
