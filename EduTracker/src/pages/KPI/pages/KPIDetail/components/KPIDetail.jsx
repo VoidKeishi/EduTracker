@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { LinearProgress, Box, CircularProgress } from "@mui/material";
 import styled from "styled-components";
 import Popup from "./index";
+import oie from '../../../../../assets/oie.png';
 
 const Icon = styled.img`
   height: 1.5rem;
@@ -2292,7 +2293,7 @@ const KPIDetail = () =>{
                 <CustomerStat>
                   <CustomerValue>
                     <CustomerValueContent sx={{ width: "100%" }}>
-                      <Circularprogress1 />
+                      <img src={oie} alt="OIE" />
                     </CustomerValueContent>
                     <CustomerLabel>
                       <Subhead>Ứớc tính hoàn thành: 7 ngày</Subhead>
