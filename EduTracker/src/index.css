@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ribeye:wght@400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,4 +78,13 @@
   background-color: #FABB18;
   border: 0;
   font-weight: 600;
+}
+
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
 }

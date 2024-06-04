@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { themeOption } from './utils/theme.js'
 import { ThemeProvider } from '@mui/material/styles'
 import { AppProvider } from './context/AppContext.jsx'
+import { BrowserRouter } from "react-router-dom";
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <CssBaseline>
       <ThemeProvider theme={themeOption}>
         <AppProvider>
-          <App />
+            <App />
         </AppProvider>
       </ThemeProvider>
     </CssBaseline>
