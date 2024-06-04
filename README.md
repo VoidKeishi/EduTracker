@@ -12,3 +12,4 @@ npm i react-router-dom
 
 npm i web-vitals (optional, if all of the above is installed but the web failed)
 npm run dev
+# Desktop
