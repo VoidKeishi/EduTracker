@@ -11,6 +11,7 @@ import {
 function Modal() {
     const [inputValueName, setInputValueName] = React.useState('')
     const [inputValueNote, setInputValueNote] = React.useState('')
+    const [inputValueStartDate, setInputValueStartDate] = React.useState('')
     return (
         <div style={{ zIndex: 1000, backgroundColor: 'rgba(0, 0, 0, 0.7' }} className='fixed inset-0 bg-color=grey backdrop-blur-sm flex items-center justify-center'>
             <div style={{backgroundColor: 'white'}}className="w-[50rem] h-[38rem] relative rounded-xl bg-m3-white box-border overflow-hidden flex flex-row items-start justify-start leading-[normal] tracking-[normal] border-[1px] border-solid border-m3-sys-light-outline-variant mq450:h-auto">
@@ -102,14 +103,11 @@ function Modal() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-[8.756rem] left-[0rem] rounded-t rounded-b-none w-[26.438rem] flex flex-col items-start justify-start pt-[0rem] px-[0rem] pb-[0rem] box-border max-w-full">
+                <div className="absolute top-[9rem] left-[0rem] rounded-t rounded-b-none w-[26.438rem] flex flex-col items-start justify-start pt-[0rem] px-[0rem] pb-[0rem] box-border max-w-full">
                   <div className="self-stretch rounded box-border flex flex-col items-start justify-start max-w-full border-[3px] border-solid border-m3-sys-light-primary">
                     <div className="self-stretch rounded-t rounded-b-none flex flex-row items-start justify-start py-[0.25rem] pr-[0rem] pl-[1rem] box-border max-w-full [row-gap:20px] mq450:flex-wrap">
                       <div className="flex-1 flex flex-col items-start justify-center pt-[0rem] pb-[0.75rem] px-[0rem] box-border relative min-w-[14.563rem] min-h-[3rem] max-w-full">
                         <div className="flex flex-row items-center justify-start">
-                          <div className="relative text-[1rem] tracking-[0.5px] leading-[1.5rem] font-m3-label-large text-gray text-left inline-block min-w-[5.688rem]">
-                            17/08/2023
-                          </div>
                           <img
                             className="h-[1rem] w-[0rem] relative hidden"
                             alt=""
@@ -117,9 +115,17 @@ function Modal() {
                         </div>
                         <div className="!m-[0] absolute top-[-0.75rem] left-[-0.25rem] bg-m3-white flex flex-row items-center justify-start py-[0rem] px-[0.25rem] whitespace-nowrap">
                           <div className="relative text-[0.75rem] tracking-[0.4px] leading-[1rem] font-m3-label-large text-m3-sys-light-primary text-left inline-block min-w-[4.75rem]">
-                            Ngày bắt đầu
+                            Deadline
                           </div>
                         </div>
+                        <input
+                          className="w-[20rem] [border:none] [outline:none] bg-[transparent] self-stretch h-[1.5rem] flex flex-row items-center justify-start font-m3-label-large text-[1rem] text-gray min-w-[3.063rem]"
+                          placeholder="17/08/2024"
+                          type="text"
+                          value={inputValueStartDate}
+                          onChange={e => setInputValueStartDate(e.target.value)}
+
+                        />
                       </div>
                       <div className="flex flex-col items-center justify-center p-[0.25rem]">
                         <div className="w-[2.5rem] h-[2.5rem] rounded-81xl overflow-hidden shrink-0 flex flex-row items-center justify-center">
@@ -135,7 +141,7 @@ function Modal() {
                     </div>
                   </div>
                   <div className="w-full !m-[0] absolute right-[0rem] bottom-[-1.25rem] left-[0rem] flex flex-row items-start justify-start pt-[0.25rem] px-[1rem] pb-[0rem] box-border max-w-full">
-                    <div className="flex-1 relative text-[0.75rem] tracking-[0.4px] leading-[1rem] font-m3-label-large text-m3-sys-light-on-surface-variant text-left inline-block max-w-full">
+                    <div style={{marginLeft:'0.2rem'}}className="flex-1 relative text-[0.75rem] tracking-[0.4px] leading-[1rem] font-m3-label-large text-m3-sys-light-on-surface-variant text-left inline-block max-w-full">
                       DD/MM/YYYY
                     </div>
                   </div>
