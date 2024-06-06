@@ -45,10 +45,10 @@ function Task() {
           sx={{ marginBottom: "1rem" }}
           aria-label="calendar view"
         >
-          <ToggleButton value="calendar" aria-label="calendar view">
+          <ToggleButton value="calendar" aria-label="calendar view" sx={{ borderRadius: "1rem" }}>
             Lịch
           </ToggleButton>
-          <ToggleButton value="status" aria-label="status view">
+          <ToggleButton value="status" aria-label="status view" sx={{ borderRadius: "1rem" }}>
             Trạng thái
           </ToggleButton>
         </ToggleButtonGroup>
@@ -57,10 +57,20 @@ function Task() {
           initialView="dayGridMonth"
           events={[
             { title: 'event 1', date: '2024-05-01' },
-            { title: 'Dạy học UI-UX', date: '2024-06-07' },
-            { title: 'Dự hội thảo NLP', date: '2024-06-07' },
-            { title: 'Học piano', date: '2024-06-07' },
-            { title: 'Trông thi Giải tích 3', date: '2024-06-06' }
+            { title: '14:00 Dạy học UI-UX', date: '2024-06-07' },
+            { title: '15:30 Dự hội thảo NLP', date: '2024-06-07' },
+            { title: '20:00 Học piano', date: '2024-06-07' },
+            { title: '6:45 Trông thi Giải tích 3', date: '2024-06-06' },
+            { title: '7:30 Seminar', date: '2024-06-09' },
+            { title: 'Họp cổ tức cổ đông', date: '2024-06-17' },
+            { title: 'Spa day', date: '2024-06-17' },
+            { title: '8:00 Dạy học', date: '2024-06-04' },
+            { title: '8:00 Dạy học', date: '2024-06-11' },
+            { title: '8:00 Dạy học', date: '2024-06-18' },
+            { title: '8:00 Dạy học', date: '2024-06-25' },
+            { title: '11:00 Dự hội thảo', date: '2024-06-22' },
+            { title: 'Nghỉ phép', date: '2024-06-28' },
+            
           ]}
           eventColor="#006874"
         />
