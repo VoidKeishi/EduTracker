@@ -11,13 +11,14 @@ import {
 function Modal() {
 
     return (
-        <div style={{ zIndex: 1000 }} className='fixed inset-0 bg-color=grey bg-opacity=10 backdrop-blur-sm flex items-center justify-center'>
-            <div className="w-[50rem] h-[38rem] relative rounded-xl bg-m3-white box-border overflow-hidden flex flex-row items-start justify-start leading-[normal] tracking-[normal] border-[1px] border-solid border-m3-sys-light-outline-variant mq450:h-auto">
+        <div style={{ zIndex: 1000, backgroundColor: 'rgba(0, 0, 0, 0.7' }} className='fixed inset-0 bg-color=grey backdrop-blur-sm flex items-center justify-center'>
+            <div style={{backgroundColor: 'white'}}className="w-[50rem] h-[38rem] relative rounded-xl bg-m3-white box-border overflow-hidden flex flex-row items-start justify-start leading-[normal] tracking-[normal] border-[1px] border-solid border-m3-sys-light-outline-variant mq450:h-auto">
                 <section className="flex-1 flex flex-row flex-wrap items-start justify-start pt-[2rem] px-[2rem] pb-[5.375rem] box-border max-w-full text-left text-[2rem] text-black font-m3-label-large mq500:pt-[1.313rem] mq500:pb-[3.5rem] mq500:box-border">
+                    <label style={{display: 'inline-block'}}> Tạo việc mới </label>
                     <div className="h-[3.25rem] flex-1 overflow-hidden flex flex-col items-start justify-start pt-[2.687rem] px-[0rem] pb-[0.5rem] box-border gap-[1.875rem] max-w-full">
                         <div className="w-[21rem] h-[0.063rem] flex flex-row items-start justify-start pt-[0.062rem] px-[1rem] pb-[0rem] box-border shrink-0 [debug_commit:bf4bc93] max-w-full">
                             <div className="h-[0.063rem] flex-1 relative box-border border-t-[1px] border-solid border-m3-sys-light-on-surface-variant" />
-                            
+                                
                             </div>
                         </div>
                         <div className="flex-1 flex flex-col items-start justify-start pt-[3.5rem] px-[0rem] pb-[0rem] box-border max-w-full ml-[-28.313rem]">
@@ -43,9 +44,8 @@ function Modal() {
                                         <div className="flex flex-row items-center justify-center p-[0.5rem]">
                                             <img
                                             className="h-[1.5rem] w-[1.5rem] relative"
-                                            loading="lazy"
                                             alt=""
-                                            src="/icon.svg"
+                                            src="svgA/icon_cancel.svg"
                                             />
                                         </div>
                                         </div>
@@ -80,7 +80,7 @@ function Modal() {
                             <img
                               className="h-[1.5rem] w-[1.5rem] relative"
                               alt=""
-                              src="/icon.svg"
+                              src="svgA/icon_cancel.svg"
                             />
                           </div>
                         </div>
@@ -118,9 +118,8 @@ function Modal() {
                           <div className="bg-m3-state-layers-light-on-surface-variant-opacity-012 flex flex-row items-center justify-center p-[0.5rem]">
                             <img
                               className="h-[1.5rem] w-[1.5rem] relative"
-                              loading="lazy"
                               alt=""
-                              src="/iconstoday-24px.svg"
+                              src="svgA/iconstoday-24px.svg"
                             />
                           </div>
                         </div>
