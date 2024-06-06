@@ -12,13 +12,15 @@ import GeneralSettings from './pages/Settings/pages/GeneralSettings'
 import ProfileSettings from './pages/Settings/pages/ProfileSettings'
 import KPIDetail from './pages/KPI/pages/KPIDetail/components/KPIDetail'
 import Modal from 'react-modal';
+import LandingPage from './pages/LandingPage/LandingPage'
 
 function App() {
   Modal.setAppElement('#root');
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SignIn />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/' element={<LandingPage />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/reset-password' element={<ResetPassword />} />
