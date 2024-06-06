@@ -1,14 +1,14 @@
 import React, { useState, useCallback } from "react";
 import { LinearProgress, Box, CircularProgress } from "@mui/material";
 import styled from "styled-components";
-import Popup from "./index";
 import oie from '../../../../../assets/oie.png';
-
+import Modal from './Modal.jsx';
 const Icon = styled.img`
   height: 1.5rem;
   width: 1.5rem;
   position: relative;
 `;
+
 const StateLayer = styled.div`
   display: none;
   flex-direction: row;
@@ -1699,6 +1699,7 @@ const TableContent = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
+  z-index: 0;
 `;
 const LabelText1 = styled.div`
   position: relative;
@@ -1724,7 +1725,7 @@ const Button4 = styled.button`
   border: none;
   padding: 0;
   background-color: #006874;
-  border-radius: 100px;
+  border-radius: 10000px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -2237,7 +2238,7 @@ const DesktopChiTitKpiRoot = styled.div`
 
 const KPIDetail = () =>{
 
-  const {showPopup, setShowPopup} = useState(false)
+  const [showPopup, setShowPopup] = useState(false);
   const onTrackAchieveExcel1Click = useCallback(() => {
     // Please sync "Desktop - KPI " to the project
   }, []);
@@ -2255,7 +2256,7 @@ const KPIDetail = () =>{
   }, []);
 
   const addTaskClick = useCallback(() => {
-    setShowPopup(true)
+    setShowPopup(true);
   }, []);
 
   return (
@@ -2813,9 +2814,10 @@ const KPIDetail = () =>{
                       <Button4 onClick={addTaskClick}>
                         <StateLayer3>
                           <LabelText1>+ Công việc mới</LabelText1>
-                          {showPopup && <Popup />}
+                          
                         </StateLayer3>
                       </Button4>
+                      
                     </ViewReportButton>
                   </Table>
                   <SecondTableContainer>
@@ -3336,14 +3338,17 @@ const KPIDetail = () =>{
                 <Button4 onClick={addTaskClick}>
                   <StateLayer3>
                     <LabelText1>+ Công việc mới</LabelText1>
-                    {showPopup && <Popup />}
+                    
                   </StateLayer3>
                 </Button4>
               </ButtonWrapper>
+              
             </PageContent>
+            {showPopup && <Modal zIndex={1000} />} 
         </Content>
       </Navigation1>
-    </DesktopChiTitKpiRoot>
+
+    </DesktopChiTitKpiRoot> 
   );
 };
 

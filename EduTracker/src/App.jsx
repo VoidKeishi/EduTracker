@@ -10,9 +10,11 @@ import KpiGeneral from './pages/KPI/pages/KPIGeneral'
 import Task from './pages/Task'
 import GeneralSettings from './pages/Settings/pages/GeneralSettings'
 import ProfileSettings from './pages/Settings/pages/ProfileSettings'
-import KPIDetail from './pages/KPI/pages/KPIDetail/components'
+import KPIDetail from './pages/KPI/pages/KPIDetail/components/KPIDetail'
+import Modal from 'react-modal';
 
 function App() {
+  Modal.setAppElement('#root');
   return (
     <BrowserRouter>
       <Routes>
