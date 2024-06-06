@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-function DailyTask() {
+function DailyTask(props) {
   return (
     <Box
       sx={{
@@ -16,12 +16,12 @@ function DailyTask() {
         <Typography
           variant='body1'
         >
-          Dạy học
+          {props.taskName}
         </Typography>
         <Typography
           variant='body1'
         >
-          D9- 401
+          {props.taskLocation}
         </Typography>
       </Box>
       <Box
@@ -32,7 +32,7 @@ function DailyTask() {
         <Typography
           variant='body1'
         >
-          8h - 10h
+          {props.taskTime}
         </Typography>
       </Box>
     </Box>

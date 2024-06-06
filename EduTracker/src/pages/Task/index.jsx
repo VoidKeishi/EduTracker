@@ -8,6 +8,10 @@ import Button from '@mui/material/Button';
 import DailyTask from './components/DailyTask';
 
 function Task() {
+  const today = new Date()
+  const date = String(today.getDate()).padStart(2, '0') + '/' + 
+  String(today.getMonth() + 1).padStart(2, '0') + '/' + 
+  today.getFullYear();
   return (
     <Box
       sx={{
@@ -27,7 +31,7 @@ function Task() {
           initialView="dayGridMonth"
           events={[
             { title: 'event 1', date: '2024-05-01' },
-            { title: 'event 2', date: '2024-05-02' }
+            { title: 'event 2', date: '2024-06-07' }
           ]}
         />
       </Box>
@@ -61,13 +65,13 @@ function Task() {
               marginBottom: "1.5rem"
             }}
           >
-            30/3/2023
+            {date}
           </Typography>
-          <DailyTask />
+          <DailyTask taskName="Dạy học UI-UX" taskLocation="D9-401" taskTime = "14h00 - 17h30"/>
           <Divider />
-          <DailyTask />
+          <DailyTask taskName="Dự hội thảo NLP" taskLocation="C2-101" taskTime = "19h00 - 21h00"/>
           <Divider />
-          <DailyTask />
+          <DailyTask taskName="Học piano" taskLocation="Nhà" taskTime = "21h30 - 22h00"/>
           <Box
             sx={{
               marginTop: "2rem",
@@ -103,7 +107,7 @@ function Task() {
               textAlign: "center"
             }}
           >
-            23/7/2023
+            {date}
           </Typography>
           <Box
             sx={{
