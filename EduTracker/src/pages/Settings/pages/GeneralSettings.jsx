@@ -350,7 +350,7 @@ const GeneralSettings = () => {
                                   />
                                 </div>
                               </div>
-                              <b className="self-stretch relative tracking-[0.5px] leading-[1rem] font-semibold">
+                              <b className="self-stretch relative tracking-[0.5px] leading-[1rem] font-semibold text-white">
                                 Label
                               </b>
                             </div>
@@ -364,7 +364,7 @@ const GeneralSettings = () => {
                                   />
                                 </div>
                               </div>
-                              <div className="self-stretch relative tracking-[0.5px] leading-[1rem] font-medium">
+                              <div className="self-stretch relative tracking-[0.5px] leading-[1rem] font-medium text-white">
                                 Label
                               </div>
                             </div>
@@ -383,7 +383,7 @@ const GeneralSettings = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="self-stretch relative text-[0.75rem] tracking-[0.5px] leading-[1rem] font-medium text-m3-sys-light-outline-variant">
+                              <div className="self-stretch relative text-[0.75rem] tracking-[0.5px] leading-[1rem] font-medium text-m3-sys-light-outline-variant text-white">
                                 Label
                               </div>
                             </div>
