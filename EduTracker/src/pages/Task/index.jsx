@@ -1,3 +1,5 @@
+import React, {useState} from 'react';
+
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import Box from '@mui/material/Box';
@@ -7,11 +9,20 @@ import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
 import DailyTask from './components/DailyTask';
 
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
 function Task() {
   const today = new Date()
   const date = String(today.getDate()).padStart(2, '0') + '/' + 
   String(today.getMonth() + 1).padStart(2, '0') + '/' + 
   today.getFullYear();
+  const [view, setView] = React.useState('month');
+
+  const handleView = (event, newView) => {
+    setView(newView);
+  };
+  
   return (
     <Box
       sx={{
@@ -26,6 +37,21 @@ function Task() {
           width: "70%",
         }}
       >
+        <ToggleButtonGroup
+          color="primary"
+          value={view}
+          exclusive
+          onChange={handleView}
+          sx={{ marginBottom: "1rem" }}
+          aria-label="calendar view"
+        >
+          <ToggleButton value="calendar" aria-label="calendar view">
+            Lịch
+          </ToggleButton>
+          <ToggleButton value="status" aria-label="status view">
+            Trạng thái
+          </ToggleButton>
+        </ToggleButtonGroup>
         <FullCalendar
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
