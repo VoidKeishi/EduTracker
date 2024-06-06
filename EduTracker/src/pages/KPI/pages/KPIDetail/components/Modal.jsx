@@ -9,7 +9,8 @@ import {
   } from "@mui/material";
 
 function Modal() {
-
+    const [inputValueName, setInputValueName] = React.useState('')
+    const [inputValueNote, setInputValueNote] = React.useState('')
     return (
         <div style={{ zIndex: 1000, backgroundColor: 'rgba(0, 0, 0, 0.7' }} className='fixed inset-0 bg-color=grey backdrop-blur-sm flex items-center justify-center'>
             <div style={{backgroundColor: 'white'}}className="w-[50rem] h-[38rem] relative rounded-xl bg-m3-white box-border overflow-hidden flex flex-row items-start justify-start leading-[normal] tracking-[normal] border-[1px] border-solid border-m3-sys-light-outline-variant mq450:h-auto">
@@ -34,18 +35,21 @@ function Modal() {
                                         </div>
                                         </div>
                                         <input
-                                        className="w-[2.75rem] [border:none] [outline:none] bg-[transparent] h-[1.5rem] flex flex-row items-center justify-start font-m3-label-large text-[1rem] text-gray"
+                                        className="w-[10rem] [border:none] [outline:none] bg-[transparent] h-[1.5rem] flex flex-row items-center justify-start font-m3-label-large text-[1rem] text-gray"
                                         placeholder="Ăn tối"
                                         type="text"
+                                        value = {inputValueName}
+                                        onChange={e => setInputValueName(e.target.value)}
                                         />
                                     </div>
                                     <div className="flex flex-col items-center justify-center p-[0.25rem]">
-                                        <div className="w-[2.5rem] h-[2.5rem] rounded-81xl overflow-hidden shrink-0 flex flex-row items-center justify-center">
+                                        <div className="w-[2.5rem] h-[3rem] rounded-81xl overflow-hidden shrink-0 flex flex-row items-center justify-center">
                                         <div className="flex flex-row items-center justify-center p-[0.5rem]">
                                             <img
                                             className="h-[1.5rem] w-[1.5rem] relative"
                                             alt=""
-                                            src="svgA/icon_cancel.svg"
+                                            src="/svgA/icon-cancel.svg"
+                                            onClick={() => setInputValueName('')}
                                             />
                                         </div>
                                         </div>
@@ -69,9 +73,12 @@ function Modal() {
                           </div>
                         </div>
                         <input
-                          className="w-[calc(100%_-_276px)] [border:none] [outline:none] bg-[transparent] self-stretch h-[1.5rem] flex flex-row items-center justify-start font-m3-label-large text-[1rem] text-gray min-w-[3.063rem]"
+                          className="w-[20rem] [border:none] [outline:none] bg-[transparent] self-stretch h-[1.5rem] flex flex-row items-center justify-start font-m3-label-large text-[1rem] text-gray min-w-[3.063rem]"
                           placeholder="Măm măm"
                           type="text"
+                          value={inputValueNote}
+                          onChange={e => setInputValueNote(e.target.value)}
+
                         />
                       </div>
                       <div className="flex flex-col items-center justify-center p-[0.25rem]">
@@ -80,7 +87,8 @@ function Modal() {
                             <img
                               className="h-[1.5rem] w-[1.5rem] relative"
                               alt=""
-                              src="svgA/icon_cancel.svg"
+                              src="/svgA/icon-cancel.svg"
+                              onClick={() => setInputValueNote('')}
                             />
                           </div>
                         </div>
@@ -119,7 +127,7 @@ function Modal() {
                             <img
                               className="h-[1.5rem] w-[1.5rem] relative"
                               alt=""
-                              src="svgA/iconstoday-24px.svg"
+                              src="/svgA/iconstoday-24px.svg"
                             />
                           </div>
                         </div>
@@ -247,14 +255,14 @@ function Modal() {
                 />
               </div>
               <div className="flex flex-row items-center justify-start gap-[0.437rem]">
-                <button className="cursor-pointer [border:none] p-0 bg-m3-sys-light-primary rounded-81xl overflow-hidden flex flex-col items-center justify-center">
+                <button style={ {backgroundColor: '#006874', color: '#ffffff', borderRadius: '20px'}}className="cursor-pointer [border:none] p-0 bg-m3-sys-light-primary rounded-81xl overflow-hidden flex flex-col items-center justify-center">
                   <div className="flex flex-row items-center justify-center py-[0.625rem] px-[1.437rem]">
                     <div className="relative text-[0.875rem] tracking-[0.1px] leading-[1.25rem] font-medium font-m3-label-large text-m3-white text-center inline-block min-w-[3.313rem]">
                       Tạo mới
                     </div>
                   </div>
                 </button>
-                <button className="cursor-pointer p-0 bg-[transparent] rounded-81xl overflow-hidden flex flex-col items-center justify-center border-[1px] border-solid border-m3-sys-light-outline">
+                <button style={{borderRadius: '20px'}}className="cursor-pointer p-0 bg-[transparent] rounded-81xl overflow-hidden flex flex-col items-center justify-center border-[1px] border-solid border-m3-sys-light-outline">
                   <div className="flex flex-row items-center justify-center py-[0.625rem] px-[1.5rem]">
                     <div className="relative text-[0.875rem] tracking-[0.1px] leading-[1.25rem] font-medium font-m3-label-large text-m3-sys-light-primary text-center inline-block min-w-[1.563rem]">
                       Huỷ

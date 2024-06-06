@@ -1734,6 +1734,21 @@ const Button4 = styled.button`
   flex-shrink: 0;
   debug_commit: bf4bc93;
 `;
+
+const Button4a = styled.button`
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: #006874;
+  border-radius: 10000px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  debug_commit: bf4bc93;
+`;
 const ViewReportButton = styled.div`
   width: 43.375rem;
   display: flex;
@@ -2256,6 +2271,7 @@ const KPIDetail = () =>{
   }, []);
 
   const addTaskClick = useCallback(() => {
+    event.stopPropagation();
     setShowPopup(true);
   }, []);
 
@@ -2810,16 +2826,15 @@ const KPIDetail = () =>{
                         </CellElements11>
                       </ImageText3>
                     </TableContent>
-                    <ViewReportButton>
-                      <Button4 onClick={addTaskClick}>
+                  </Table>
+                  <ViewReportButton>
+                      <Button4a onClick={addTaskClick} style={{marginTop: '-3.41rem'}}>
                         <StateLayer3>
                           <LabelText1>+ Công việc mới</LabelText1>
                           
                         </StateLayer3>
-                      </Button4>
-                      
+                      </Button4a>
                     </ViewReportButton>
-                  </Table>
                   <SecondTableContainer>
                     <Title9>ITSS</Title9>
                     <SecondTable>
