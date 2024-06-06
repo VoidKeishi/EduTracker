@@ -31,7 +31,10 @@ function Task() {
           initialView="dayGridMonth"
           events={[
             { title: 'event 1', date: '2024-05-01' },
-            { title: 'event 2', date: '2024-06-07' }
+            { title: 'Dạy học UI-UX', date: '2024-06-07' },
+            { title: 'Dự hội thảo NLP', date: '2024-06-07' },
+            { title: 'Học piano', date: '2024-06-07' },
+            { title: 'Trông thi Giải tích 3', date: '2024-06-06' }
           ]}
         />
       </Box>
