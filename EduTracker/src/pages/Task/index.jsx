@@ -36,6 +36,7 @@ function Task() {
             { title: 'Học piano', date: '2024-06-07' },
             { title: 'Trông thi Giải tích 3', date: '2024-06-06' }
           ]}
+          eventColor="#006874"
         />
       </Box>
       <Box
