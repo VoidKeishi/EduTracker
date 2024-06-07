@@ -59,7 +59,7 @@ function Task() {
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
           events={[
-            { title: 'event 1', date: '2024-05-01', color: completeColor },
+            { title: 'Triển khai app', date: '2024-05-01', color: completeColor },
             { title: '14:00 Dạy học UI-UX', date: '2024-06-07', color: inProgressColor},
             { title: '19:30 Dự hội thảo NLP', date: '2024-06-07', color: inProgressColor},
             { title: '20:00 Học piano', date: '2024-06-07', color: pendingColor },
