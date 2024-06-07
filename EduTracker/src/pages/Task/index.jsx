@@ -13,6 +13,9 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
 function Task() {
+  const pendingColor = '#9DDE8B'
+  const inProgressColor = '#40A578'
+  const completeColor = '#006874'
   const today = new Date()
   const date = String(today.getDate()).padStart(2, '0') + '/' + 
   String(today.getMonth() + 1).padStart(2, '0') + '/' + 
@@ -45,10 +48,10 @@ function Task() {
           sx={{ marginBottom: "1rem" }}
           aria-label="calendar view"
         >
-          <ToggleButton value="calendar" aria-label="calendar view" sx={{ borderRadius: "1rem" }}>
+          <ToggleButton style={{backgroundColor: 'white'}}value="calendar" aria-label="calendar view" sx={{ borderRadius: "1rem" }}>
             Lịch
           </ToggleButton>
-          <ToggleButton value="status" aria-label="status view" sx={{ borderRadius: "1rem" }}>
+          <ToggleButton style={{backgroundColor: 'white'}}value="status" aria-label="status view" sx={{ borderRadius: "1rem" }}>
             Trạng thái
           </ToggleButton>
         </ToggleButtonGroup>
@@ -56,21 +59,39 @@ function Task() {
           plugins={[ dayGridPlugin ]}
           initialView="dayGridMonth"
           events={[
-            { title: 'event 1', date: '2024-05-01' },
-            { title: '14:00 Dạy học UI-UX', date: '2024-06-07' },
-            { title: '15:30 Dự hội thảo NLP', date: '2024-06-07' },
-            { title: '20:00 Học piano', date: '2024-06-07' },
+            { title: 'Triển khai app', date: '2024-05-01', color: completeColor },
+            { title: '14:00 Dạy học UI-UX', date: '2024-06-07', color: inProgressColor},
+            { title: '19:30 Dự hội thảo NLP', date: '2024-06-07', color: inProgressColor},
+            { title: '20:00 Học piano', date: '2024-06-07', color: pendingColor },
             { title: '6:45 Trông thi Giải tích 3', date: '2024-06-06' },
-            { title: '7:30 Seminar', date: '2024-06-09' },
-            { title: 'Họp cổ tức cổ đông', date: '2024-06-17' },
-            { title: 'Spa day', date: '2024-06-17' },
-            { title: '8:00 Dạy học', date: '2024-06-04' },
-            { title: '8:00 Dạy học', date: '2024-06-11' },
-            { title: '8:00 Dạy học', date: '2024-06-18' },
-            { title: '8:00 Dạy học', date: '2024-06-25' },
+            { title: '7:30 Seminar', date: '2024-06-09', color: pendingColor },
+            { title: 'Họp cổ tức cổ đông', date: '2024-06-17', color: pendingColor},
+            { title: 'Spa day', date: '2024-06-17', color: pendingColor },
+            { title: '8:00 Dạy học OOP', date: '2024-06-04', color: completeColor },
+            { title: '8:00 Dạy học OOP', date: '2024-06-11', color: pendingColor },
+            { title: '8:00 Dạy học OOP', date: '2024-06-18', color: pendingColor },
+            { title: '8:00 Dạy học OOP', date: '2024-06-25', color: pendingColor },
             { title: '11:00 Dự hội thảo', date: '2024-06-22' },
-            { title: 'Nghỉ phép', date: '2024-06-28' },
-            
+            { title: 'Nghỉ phép', date: '2024-06-28', color: completeColor },
+            ...Array.from({ length: 50 }, (_, index) => {
+              const currentDate = new Date();
+              const randomDate = new Date(currentDate.getTime() + Math.random() * (currentDate.getTime() - currentDate.setDate(currentDate.getDate() - 30)));
+              const formattedDate = randomDate.toISOString().split('T')[0];
+              const color = randomDate < currentDate ? completeColor : Math.random() < 0.5 ? inProgressColor : pendingColor;
+              const taskTitles = [
+                'Hoàn thành dự án',
+                'Viết tài liệu',
+                'Sửa lỗi',
+                'Triển khai tính năng mới',
+                'Tối ưu hóa mã nguồn',
+                'Kiểm thử ứng dụng',
+                'Thiết kế giao diện người dùng',
+                'Triển khai ứng dụng',
+                'Tạo hướng dẫn sử dụng'
+              ];
+              const randomTitle = taskTitles[Math.floor(Math.random() * taskTitles.length)];
+              return { title: randomTitle, date: formattedDate, color };
+            })
           ]}
           eventColor="#006874"
         />

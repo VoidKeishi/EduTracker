@@ -15,10 +15,11 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked'
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked'
 import Button from '@mui/material/Button'
 
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState} from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function SignUp() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
   const [inputRole, setInputRole] = useState('')
   const [checkWorkingPlace, setCheckWorkingPlace] = useState(false)
@@ -180,6 +181,7 @@ function SignUp() {
               backgroundColor: '#006874',
               fontSize: '0.75rem'
             }}
+            onClick={() => navigate('/sign-in')}
           >
             Đăng ký
           </Button>
@@ -188,7 +190,7 @@ function SignUp() {
           <span style={{ marginRight: '1.5rem' }}>Đã có tài khoản?</span>
           <Link
             style={{ textDecoration: 'none', color: '#006874' }}
-            to={'/'}
+            to={'/sign-in'}
           >
             Đăng nhập
           </Link>
